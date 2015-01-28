@@ -1,0 +1,32 @@
+- heading: >
+    Access a VM's State. <span class="text-muted">From Outside
+    of the VM.</span>
+  text: >
+    Access memory using physical addresses, virtual addresses,
+    and operating system or application level symbols. Receive
+    notifications for memory and register events. Integration with
+    <a href="http://www.volatilityfoundation.org/">Volatility</a>
+    for higher-level analysis.
+  image: access.png
+  text_align: left
+
+- heading: >
+    Broad platform support. <span class="text-muted">And easily
+    extensible.
+  text: >
+    Works with Xen, KVM, Qemu, and Raw memory files. Supports
+    both Windows and Linux VMs. Supports 32-bit, PAE, and 64-bit
+    x86 and ARM Cortex-A15 architectures.
+  image: support-logos.png
+  text_align: right
+
+- heading: >
+    Optimized Performance. <span class="text-muted">Near native
+    speeds.</span>
+  text: >
+    Virtual machine introspection does not have to be slow. Access
+    Xen and KVM guest memory at speeds that will make you think you
+    are inside the guest. Multiple cache layers with optional 
+    manual cache management.
+  image: cache-page.png
+  text_align: left

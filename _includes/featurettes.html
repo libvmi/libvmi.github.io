@@ -1,0 +1,26 @@
+{% for feature in site.data.featurettes %}
+<hr class="featurette-divider">
+
+<div class="row featurette">
+
+  {% if feature.text_align == 'left' %}
+  <div class="col-md-7">
+      <h2 class="featurette-heading">{{ feature.heading }}</h2>
+      <p class="lead">{{ feature.text }}</p>
+  </div>
+  <div class="col-md-5">
+    <img class="featurette-image img-responsive" src="/assets/images/{{feature.image }}">
+  </div>
+  {% else %}
+  <div class="col-md-5">
+    <img class="featurette-image img-responsive" src="/assets/images/{{feature.image }}">
+  </div>
+  <div class="col-md-7">
+      <h2 class="featurette-heading">{{ feature.heading }}</h2>
+      <p class="lead">{{ feature.text }}</p>
+  </div>
+  {% endif %}
+
+</div>
+{% endfor %}
+<hr class="featurette-divider">

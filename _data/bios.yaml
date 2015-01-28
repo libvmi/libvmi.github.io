@@ -1,0 +1,40 @@
+- image: bryan.png
+  description: >
+    <a href="http://www.bryanpayne.org"><strong>Bryan Payne</strong></a> 
+    created LibVMI (in the beginning it was called XenAccess) in the Fall
+    of 2005 as a graduate student at Georgia Tech. Since then he has
+    continued work on LibVMI while using it for everything from academic
+    research to production systems. When not working on LibVMI, Bryan leads
+    security research and engineering at
+    <a href="https://www.nebula.com">Nebula</a>, a private cloud provider
+    based on <a href="https://www.openstack.org">OpenStack</a>.
+
+- image: steve.png
+  description: >
+    <strong>Steven Maresca</strong> is lead engineer and security researcher
+    at <a href="http://www.zentific.com/">Zentific LLC</a>. He builds flexible
+    tools to manage virtual machines and reduce complexity in systems
+    security. He possesses deep knowledge of OS and hypervisor internals,
+    software development, systems design, and information security. A
+    long-time Xen community member, Steven is always eager to share his
+    experiences and foster collaboration with peers. Sponsored as part of
+    the DARPA Cyber Fast Track program, he recently led a research effort
+    to secure virtual machines.  
+
+- image: tamas.png
+  description: >
+      <a href="http://de.linkedin.com/pub/tamas-k-lengyel/20/478/492"><strong>Tamas K Lengyel</strong></a>
+      (<a href="https://twitter.com/tklengyel">@tklengyel</a>) is a
+      Ph.D. candidate at the University of Connecticut and Security
+      Researcher at the Technische Universitat Munchen and at
+      <a href="http://www.zentific.com/">Zentific LLC</a>.
+      Tamas' research focus is information security and virtualization. He
+      is active in security research, has authored several publications as
+      the prime author, and contributes his expertise to open-source
+      software development, among them LibVMI and Xen.
+
+- image: tony.png
+  description: >
+    <strong>Antony Saba</strong> is a research engineer at
+    <a href="https://www.fireeye.com/">FireEye</a>, where he applies his
+    information security expertise to building advanced malware analysis tools.
