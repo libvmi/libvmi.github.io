@@ -122,6 +122,11 @@ are required for Windows. The available keys are listed below:
 
 * win\_pid Offset to EPROCESS->UniqueProcessId.
 
+Instructions and scripts helpful for determining these offsets for a
+specific guest can be found in the libvmi package. The tools for Linux
+guests are in libvmi/tools/linux-offset-finder and Windows guests are
+in libvmi/tools/windows-offset-finder.
+
 All of the offsets can be specified in either hex or decimal. For hex,
 the number should be preceded with a "0x". An example configuration
 file is shown below:
