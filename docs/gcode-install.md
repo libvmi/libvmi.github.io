@@ -159,7 +159,7 @@ Debugging
 LibVMI includes the ability to show debugging output. This output is
 very verbose, but may be useful when tracking down bugs in your
 application or in LibVMI itself. To enable the debug output, uncomment
-the VMI\_DEBUG variable near the top of the libvmi.h file. After
+the VMI\_DEBUG variable near the top of the `libvmi/debug.h` file. After
 uncommenting this variable, you will need to recompile LibVMI (and,
 optionally, reinstall LibVMI). With the debug output enabled, you will
 see lots of information on stdout about LibVMI’s operation.
