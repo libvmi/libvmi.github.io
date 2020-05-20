@@ -15,3 +15,5 @@ The API documentation at [libvmi.com/api/](http://libvmi.com/api/) is generated 
 2. Doxygen is ran in `libvmi/` directory (the one which contains `libvmi.h` and other exported headers).
 3. Doxygen's XML output file `libvmi_8h.xml` is parsed by [parse-doxygen-xml.py](https://github.com/libvmi/libvmi.github.io/blob/source/parse-doxygen-xml.py) script from this repository.
 4. The output of the above script is saved under `api/index.html` file.
+
+API docs are re-generated periodically by the Continous Integration, to ensure they are up to date with the latest version of LibVMI.
