@@ -178,7 +178,6 @@ def _func_details(memberdef):
     output = ""
 
     if not details:
-        print('lol no details :(')
         return
 
     for para in details['para']:
@@ -228,7 +227,8 @@ def _func_details(memberdef):
                     if entry['parameterdescription']:
                         desc = entry['parameterdescription']['para']
                 except TypeError:
-                    print('TypeError', memberdef, para)
+                    pass
+
                 output += "<li>[{}] <em>{}</em> {}</li>".format(dire, name, desc)
             output += "</ul>"
 
