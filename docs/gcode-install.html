@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title></title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/dist/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/libvmi.css" rel="stylesheet">
+  </head>
+
+
+  <body>
+
+        <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">LibVMI</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse navbar-right">
+              <ul class="nav navbar-nav">
+                <li><a href="/download/">Download</a></li>
+                <li><a href="/docs/">Documentation</a></li>
+                <li><a href="/api/">API</a></li>
+                <li><a href="/contact/">Contact</a></li>
+                <li><a href="https://github.com/libvmi/libvmi">Github</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+
+    <div id="wrap">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-8">
+            <h1 id="libvmi-installation-instructions">LibVMI Installation Instructions</h1>
+
+<h2 id="introduction">Introduction</h2>
+<p>LibVMI is designed for looking at 32-bit or 64-bit x86 virtual machines
+running on Xen or KVM. It also works with physical memory snapshots saved
+to a file. LibVMI should work with all recent Xen versions (3.x through
+4.1), with KVM using a patched version of QEMU-KVM or the GDB interface,
+and with any physical memory snapshot. Please report your success and
+problems using the contact information for the VMI Tools project so that
+we can continue to make this a better tool for everyone. You can get the
+latest released version of LibVMI from the download section of this website.</p>
+
+<h2 id="building-libvmi">Building LibVMI</h2>
+<p>For detailed instructions, please see the README file included with your
+LibVMI release. The instructions below provide a general overview of the
+LibVMI installation process. Before compiling LibVMI, make sure that you
+have a standard development environment installed including gcc, make,
+autoconf, etc. You will also need the follow dependencies (note, you can
+build LibVMI without support for one of its virtualization platforms if
+you would rather not install all of the dependencies for that platform):</p>
+
+<ul>
+  <li>
+    <p>(Xen only) libxc</p>
+  </li>
+  <li>
+    <p>(Xen only) libxenstore</p>
+  </li>
+  <li>
+    <p>(KVM only) libvirt</p>
+  </li>
+  <li>
+    <p>yacc or bison</p>
+  </li>
+  <li>
+    <p>lex or flex</p>
+  </li>
+  <li>
+    <p>glib version 2.16 or newer</p>
+  </li>
+</ul>
+
+<p>LibVMI uses the standard GNU build system. To compile the library, follow
+the steps shown below:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./autogen.sh
+./configure
+make
+</code></pre></div></div>
+
+<p>Note that you can specify options to the configure script to specify,
+for example, the installation location. Of note is the “–disable-xen”
+and “–disable-kvm” options, which allow you to build LibVMI without
+support for Xen or KVM, respectively. If the configure script doesn’t
+find a library that is required for only one virtualization platform,
+then it will automatically disable the associated virtualization platform.
+The results of configure are displayed to stdout so you can verify that
+everything is as you intended before proceeding with the compilation.
+For a complete list of configure options, run:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./configure --help
+</code></pre></div></div>
+
+<h2 id="installing-libvmi">Installing LibVMI</h2>
+<p>Installation is optional. This is useful if you will be developing code
+to use the LibVMI library. However, if you are just running the examples,
+then there is no need to do an installation. If you choose to install
+LibVMI, you can do it using the steps shown below:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>su -
+make install
+ldconfig
+exit
+</code></pre></div></div>
+
+<h2 id="configuring-libvmi">Configuring LibVMI</h2>
+<p>In order to work properly, LibVMI requires that you install a configuration
+file into either $HOME/etc/libvmi.conf or /etc/libvmi.conf. This file has
+a set of entries for each virtual machine or memory image that LibVMI will
+access. These entries specify things such as the OS type (e.g., Linux or
+Windows), the location of symbolic information, and offsets used to access
+data within the virtual machine or memory image. The file format is
+relatively straightforward. The generic format is shown below:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;VM Name or Filename&gt; {
+    &lt;key&gt; = &lt;value&gt;;
+    &lt;key&gt; = &lt;value&gt;;
+}
+</code></pre></div></div>
+
+<p>The VM name is what appears when you use the “xm list,” “xl list,”
+or “virsh list” commands. The filename is the filename of the memory
+image without the entire path. There are 9 different keys available
+for use. The ostype is used by both Linux and Windows targets. The
+sysmap is only used for Linux targets. The others specify offsets such
+that the linux_* values are required for Linux and the win_* values
+are required for Windows. The available keys are listed below:</p>
+
+<ul>
+  <li>
+    <p>ostype Linux or Windows guests are supported.</p>
+  </li>
+  <li>
+    <p>sysmap The path to the System.map file for the VM.  Note that this
+file must be copied into the dom0 or host VM from the domU or guest
+VM so that LibVMI can access it.</p>
+  </li>
+  <li>
+    <p>linux_tasks The number of bytes (offset) from the start of the struct
+until task_struct-&gt;tasks from linux/sched.h in the target’s kernel.</p>
+  </li>
+  <li>
+    <p>linux_mm Offset to task_struct-&gt;mm.</p>
+  </li>
+  <li>
+    <p>linux_pid Offset to task_struct-&gt;pid.</p>
+  </li>
+  <li>
+    <p>linux_pgd Offset to mm_struct-&gt;pgd.</p>
+  </li>
+  <li>
+    <p>win_tasks Offset to EPROCESS-&gt;ActiveProcessLinks.</p>
+  </li>
+  <li>
+    <p>win_pdbase Offset to EPROCESS-&gt;Pcb-&gt;DirectoryTableBase.</p>
+  </li>
+  <li>
+    <p>win_pid Offset to EPROCESS-&gt;UniqueProcessId.</p>
+  </li>
+</ul>
+
+<p>Instructions and scripts helpful for determining these offsets for a
+specific guest can be found in the libvmi package. The tools for Linux
+guests are in libvmi/tools/linux-offset-finder and Windows guests are
+in libvmi/tools/windows-offset-finder.</p>
+
+<p>All of the offsets can be specified in either hex or decimal. For hex,
+the number should be preceded with a “0x”. An example configuration
+file is shown below:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Fedora-HVM {
+    sysmap      = "/boot/System.map-2.6.18-1.2798.fc6";
+    ostype      = "Linux";
+    linux_tasks = 268;
+    linux_mm    = 276;
+    linux_pid   = 312;
+    linux_pgd   = 40;
+}
+
+WinXPSP2 {
+    ostype      = "Windows";
+    win_tasks   = 0x88;
+    win_pdbase  = 0x18;
+    win_pid     = 0x84;
+}
+</code></pre></div></div>
+
+<p>You can specify as many targets as you wish in this configuration
+file. When you are done creating this file, it must be saved to either
+$HOME/etc/libvmi.conf or /etc/libvmi.conf. With the configuration file
+in place, you are now ready to start using LibVMI.</p>
+
+<h2 id="debugging">Debugging</h2>
+<p>LibVMI includes the ability to show debugging output. This output is
+very verbose, but may be useful when tracking down bugs in your
+application or in LibVMI itself. To enable the debug output, uncomment
+the VMI_DEBUG variable near the top of the <code class="highlighter-rouge">libvmi/debug.h</code> file. After
+uncommenting this variable, you will need to recompile LibVMI (and,
+optionally, reinstall LibVMI). With the debug output enabled, you will
+see lots of information on stdout about LibVMI’s operation.</p>
+
+<p>If you are requesting help from the developers, please send the debug
+output – preferably a full debug trace attached to your email or issue
+ticket – along with your question as it will be easier to diagnose your
+problem this way.</p>
+
+<p>When troubleshooting your application, it is best to be able to see what
+is going on. If you think that the problem is within LibVMI, you can try
+enabling the debug output to identify the problem. If you think that you
+have found a bug in LibVMI, please send an email with this debug output
+and a description of the bug to the mailing list.</p>
+
+<p>If you want to see the memory maping by your application, consider using
+the vmi_print_hex function. This function allows you to easily print the
+hex and ascii values from a region of memory to stdout, which can often
+simplify debugging.</p>
+
+          </div>
+          <div class="col-sm-2"></div>
+        </div>
+      </div>
+    </div>
+
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/dist/jquery/jquery-1.11.2.min.js"></script>
+    <script src="/dist/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59412443-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+  </body>
+</html>
