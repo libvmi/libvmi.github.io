@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [ source ]
+  schedule:
+    - cron:  '0 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: jekyll/jekyll:stable
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        path: libvmi-gh-pages
+    - uses: actions/checkout@v2
+      with:
+        repository: libvmi/libvmi
+        path: libvmi
+    - name: Run a one-line script
+      run: |
+        apk add python2 doxygen
+        whoami
+        python2 -m ensurepip
+        pip install xmltodict==0.12.0
+        chown -R 1000:1000 libvmi-gh-pages
+        echo "GENERATE_XML=YES" > libvmi/libvmi/Doxyfile
+        sh -c 'cd libvmi/libvmi && doxygen'
+        python2 libvmi-gh-pages/parse-doxygen-xml.py libvmi/libvmi/xml/libvmi_8h.xml > libvmi-gh-pages/api/index.html
+        sh -c 'cd libvmi-gh-pages && jekyll build -d output'
+    - uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./libvmi-gh-pages/output
+        publish_branch: master

@@ -177,6 +177,10 @@ def _func_details(memberdef):
     details = memberdef['detaileddescription']
     output = ""
 
+    if not details:
+        print('lol no details :(')
+        return
+
     for para in details['para']:
         if type(para) != OrderedDict:
             output += "<p>" + str(para) + "</p>"
@@ -215,9 +219,16 @@ def _func_details(memberdef):
                 items = [para['parameterlist']['parameteritem']]
 
             for entry in items:
-                dire = entry['parameternamelist']['parametername']['@direction']
-                name = entry['parameternamelist']['parametername']['#text']
-                desc = entry['parameterdescription']['para']
+                dire = '<missing>'
+                name = '<missing>'
+                try:
+                    if entry['parameternamelist']:
+                        dire = entry['parameternamelist']['parametername']['@direction']
+                        name = entry['parameternamelist']['parametername']['#text']
+                    if entry['parameterdescription']:
+                        desc = entry['parameterdescription']['para']
+                except TypeError:
+                    print('TypeError', memberdef, para)
                 output += "<li>[{}] <em>{}</em> {}</li>".format(dire, name, desc)
             output += "</ul>"
 
