@@ -27,6 +27,7 @@ body {
     padding-left: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
+    top: 0;
 }
 .bs-docs-sidebar .nav>li>a {
     color: #999;
@@ -75,7 +76,7 @@ $('body').scrollspy({
 }
 .bs-docs-sidebar > ul {
     overflow-y: auto;
-    height: 750px;
+    height: calc(100vh - 40px);
 }
 
 
