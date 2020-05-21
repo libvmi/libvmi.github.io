@@ -1,5 +1,5 @@
-#!/usr/bin/env python
-import cgi
+#!/usr/bin/env python3
+import html
 import sys
 import textwrap
 import xmltodict
@@ -18,8 +18,8 @@ def front_matter():
     layout: plain
     ---
     """)
-    print output.strip()
-    print
+    print(output.strip())
+    print()
 
 
 def _macros_active(memberdef):
@@ -29,7 +29,10 @@ def _macros_active(memberdef):
         value = "(" + value + ")"
     else:
         try:
-            value = str(memberdef['initializer'])
+            if type(memberdef['initializer']) is OrderedDict:
+                value = str(memberdef['initializer']['#text'])
+            else:
+                value = str(memberdef['initializer'])
         except KeyError:
             value = ""
     return "{} {}".format(name, value)
@@ -72,7 +75,7 @@ def _macros_detail(memberdef):
                 loc += 2
                 tmp = tmp[:loc] + replace + tmp[loc:]
         else:
-            tmp = cgi.escape(str(value))
+            tmp = html.escape(str(value))
 
         desc += small("<pre>{}</pre>".format(tmp))
         desc += "</p>"
@@ -82,8 +85,8 @@ def _macros_detail(memberdef):
 
 def macros(xml):
     navdata = OrderedDict()
-    print "<h2 id='Macros'>Macros</h2>"
-    print "<table class='table'>"
+    print("<h2 id='Macros'>Macros</h2>")
+    print("<table class='table'>")
     for entry in xml['doxygen']['compounddef']['sectiondef']:
         for mem in entry['memberdef']:
             if mem['@kind'] == 'define':
@@ -98,15 +101,15 @@ def macros(xml):
                 """.format(navdata[name][1:],
                            _macros_active(mem),
                            _macros_detail(mem))
-                print "<tr><td>{}</td></tr>".format(content)
-    print "</table>"
+                print("<tr><td>{}</td></tr>".format(content))
+    print("</table>")
     return navdata
 
 
 def typedefs(xml):
     navdata = OrderedDict()
-    print "<h2 id='Typedefs'>Typedefs</h2>"
-    print "<table class='table'>"
+    print("<h2 id='Typedefs'>Typedefs</h2>")
+    print("<table class='table'>")
     for entry in xml['doxygen']['compounddef']['sectiondef']:
         for mem in entry['memberdef']:
             if mem['@kind'] == 'typedef':
@@ -129,15 +132,15 @@ def typedefs(xml):
                 </ul>
                 """.format(navdata[name][1:], definition, desc)
 
-                print "<tr><td>{}</td></tr>".format(content)
-    print "</table>"
+                print("<tr><td>{}</td></tr>".format(content))
+    print("</table>")
     return navdata
 
 
 def enums(xml):
     navdata = OrderedDict()
-    print "<h2 id='Enums'>Enums</h2>"
-    print "<table class='table'>"
+    print("<h2 id='Enums'>Enums</h2>")
+    print("<table class='table'>")
     for entry in xml['doxygen']['compounddef']['sectiondef']:
         for mem in entry['memberdef']:
             if mem['@kind'] == 'enum':
@@ -162,8 +165,8 @@ def enums(xml):
                 <li class="list-group-item">{}</li>
                 </ul>
                 """.format(navdata[name][1:], name, table)
-                print "<tr><td>{}</td></tr>".format(content)
-    print "</table>"
+                print("<tr><td>{}</td></tr>".format(content))
+    print("</table>")
     return navdata
 
 
@@ -241,8 +244,8 @@ def _func_details(memberdef):
 
 def functions(xml):
     navdata = OrderedDict()
-    print "<h2 id='Functions'>Functions</h2>"
-    print "<table class='table'>"
+    print("<h2 id='Functions'>Functions</h2>")
+    print("<table class='table'>")
     for entry in xml['doxygen']['compounddef']['sectiondef']:
         for mem in entry['memberdef']:
             if mem['@kind'] == 'function':
@@ -257,27 +260,27 @@ def functions(xml):
                 """.format(navdata[name][1:],
                            _func_signature(mem),
                            _func_details(mem))
-                print "<tr><td>{}</td></tr>".format(content)
-    print "</table>"
+                print("<tr><td>{}</td></tr>".format(content))
+    print("</table>")
     return navdata
 
 
 def nav(data):
-    print """
+    print("""
     <ul class="nav nav-stacked">
-    """
-    for category in data.keys():
-        print "<li>"
-        print "<a href='#" + category + "'>" + category + "</a>"
-        print "<ul class='nav nav-stacked'>"
-        for item in data[category].keys():
-            print "<li><a href='{}'>{}</a></li>".format(
-                    data[category][item], item)
-        print "</ul>"
-        print "</li>"
-    print """
+    """)
+    for category in list(data.keys()):
+        print("<li>")
+        print("<a href='#" + category + "'>" + category + "</a>")
+        print("<ul class='nav nav-stacked'>")
+        for item in list(data[category].keys()):
+            print("<li><a href='{}'>{}</a></li>".format(
+                    data[category][item], item))
+        print("</ul>")
+        print("</li>")
+    print("""
     </ul>
-    """
+    """)
 
 
 def main():
@@ -288,22 +291,22 @@ def main():
     sidenav = OrderedDict()
 
     front_matter()
-    print "<div class='row'><div class='col-xs-9'>"
+    print("<div class='row'><div class='col-xs-9'>")
+    sidenav['Functions'] = functions(xml)
     sidenav['Macros'] = macros(xml)
     sidenav['Typedefs'] = typedefs(xml)
     sidenav['Enums'] = enums(xml)
-    sidenav['Functions'] = functions(xml)
-    print "</div>"
-    print """
+    print("</div>")
+    print("""
     <nav class="col-xs-3">
       <div class="bs-docs-sidebar">
-    """
+    """)
     nav(sidenav)
-    print """
+    print("""
       </div>
     </nav>
-    """
-    print "</div>"
+    """)
+    print("</div>")
 
 
 if __name__ == '__main__':
