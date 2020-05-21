@@ -62,1449 +62,6 @@
           <div class="col-sm-2"></div>
           <div class="col-sm-8">
             <div class='row'><div class='col-xs-9'>
-<h2 id='Macros'>Macros</h2>
-<table class='table'>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_NOEXCEPT">#define NOEXCEPT </li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_VMI_INIT_DOMAINNAME">#define VMI_INIT_DOMAINNAME (1u << 0)</li>
-                <li class="list-group-item"><p>initialize using domain name</p></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_VMI_INIT_DOMAINID">#define VMI_INIT_DOMAINID (1u << 1)</li>
-                <li class="list-group-item"><p>initialize using domain id</p></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_VMI_INIT_EVENTS">#define VMI_INIT_EVENTS (1u << 2)</li>
-                <li class="list-group-item"><p>initialize events</p></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_VMI_INIT_DOMAINUUID">#define VMI_INIT_DOMAINUUID (1u << 3)</li>
-                <li class="list-group-item"><p>initialize using domain uuid</p></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_VMI_INIT_DOMAINWATCH">#define VMI_INIT_DOMAINWATCH (1u << 4)</li>
-                <li class="list-group-item"><p>initialize using a domain watcher</p></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_VMI_PM_INITFLAG_TRANSITION_PAGES">#define VMI_PM_INITFLAG_TRANSITION_PAGES (1u << 0)</li>
-                <li class="list-group-item"><p>Allow the use of transition-pages when checking PTE.present bit. This is a Windows-specific paging feature.</p></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_VMI_INVALID_DOMID">#define VMI_INVALID_DOMID ~0ULL</li>
-                <li class="list-group-item"><p>invalid domain id</p></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_EAX">#define EAX 0</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_EBX">#define EBX 1</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_ECX">#define ECX 2</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_EDX">#define EDX 3</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_EBP">#define EBP 4</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_ESI">#define ESI 5</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_EDI">#define EDI 6</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_ESP">#define ESP 7</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_EIP">#define EIP 8</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_EFLAGS">#define EFLAGS 9</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_RAX">#define RAX OrderedDict([(u'ref', OrderedDict([(u'@refid', u'libvmi_8h_1a2fa1397b8142d609008de2e71c83e854'), (u'@kindref', u'member'), ('#text', u'EAX')]))])</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_RBX">#define RBX EBX</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_RCX">#define RCX ECX</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_RDX">#define RDX EDX</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_RBP">#define RBP EBP</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_RSI">#define RSI ESI</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_RDI">#define RDI EDI</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_RSP">#define RSP ESP</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_RIP">#define RIP EIP</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_RFLAGS">#define RFLAGS EFLAGS</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_R8">#define R8 10</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_R9">#define R9 11</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_R10">#define R10 12</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_R11">#define R11 13</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_R12">#define R12 14</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_R13">#define R13 15</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_R14">#define R14 16</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_R15">#define R15 17</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_CR0">#define CR0 18</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_CR2">#define CR2 19</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_CR3">#define CR3 20</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_CR4">#define CR4 21</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_XCR0">#define XCR0 22</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_DR0">#define DR0 23</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_DR1">#define DR1 24</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_DR2">#define DR2 25</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_DR3">#define DR3 26</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_DR6">#define DR6 27</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_DR7">#define DR7 28</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_CS_SEL">#define CS_SEL 29</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_DS_SEL">#define DS_SEL 30</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_ES_SEL">#define ES_SEL 31</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_FS_SEL">#define FS_SEL 32</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_GS_SEL">#define GS_SEL 33</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_SS_SEL">#define SS_SEL 34</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_TR_SEL">#define TR_SEL 35</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_LDTR_SEL">#define LDTR_SEL 36</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_CS_LIMIT">#define CS_LIMIT 37</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_DS_LIMIT">#define DS_LIMIT 38</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_ES_LIMIT">#define ES_LIMIT 39</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_FS_LIMIT">#define FS_LIMIT 40</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_GS_LIMIT">#define GS_LIMIT 41</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_SS_LIMIT">#define SS_LIMIT 42</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_TR_LIMIT">#define TR_LIMIT 43</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_LDTR_LIMIT">#define LDTR_LIMIT 44</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_IDTR_LIMIT">#define IDTR_LIMIT 45</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_GDTR_LIMIT">#define GDTR_LIMIT 46</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_CS_BASE">#define CS_BASE 47</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_DS_BASE">#define DS_BASE 48</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_ES_BASE">#define ES_BASE 49</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_FS_BASE">#define FS_BASE 50</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_GS_BASE">#define GS_BASE 51</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_SS_BASE">#define SS_BASE 52</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_TR_BASE">#define TR_BASE 53</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_LDTR_BASE">#define LDTR_BASE 54</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_IDTR_BASE">#define IDTR_BASE 55</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_GDTR_BASE">#define GDTR_BASE 56</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_CS_ARBYTES">#define CS_ARBYTES 57</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_DS_ARBYTES">#define DS_ARBYTES 58</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_ES_ARBYTES">#define ES_ARBYTES 59</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_FS_ARBYTES">#define FS_ARBYTES 60</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_GS_ARBYTES">#define GS_ARBYTES 61</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_SS_ARBYTES">#define SS_ARBYTES 62</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_TR_ARBYTES">#define TR_ARBYTES 63</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_LDTR_ARBYTES">#define LDTR_ARBYTES 64</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_SYSENTER_CS">#define SYSENTER_CS 65</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_SYSENTER_ESP">#define SYSENTER_ESP 66</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_SYSENTER_EIP">#define SYSENTER_EIP 67</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_SHADOW_GS">#define SHADOW_GS 68</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_TSC">#define TSC 69</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_FLAGS">#define MSR_FLAGS 70</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_LSTAR">#define MSR_LSTAR 71</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_CSTAR">#define MSR_CSTAR 72</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_SYSCALL_MASK">#define MSR_SYSCALL_MASK 73</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_EFER">#define MSR_EFER 74</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_TSC_AUX">#define MSR_TSC_AUX 75</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_STAR">#define MSR_STAR 119</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_SHADOW_GS_BASE">#define MSR_SHADOW_GS_BASE 120</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_MTRRfix64K_00000">#define MSR_MTRRfix64K_00000 121</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_MTRRfix16K_80000">#define MSR_MTRRfix16K_80000 122</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_MTRRfix16K_A0000">#define MSR_MTRRfix16K_A0000 123</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_MTRRfix4K_C0000">#define MSR_MTRRfix4K_C0000 124</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_MTRRfix4K_C8000">#define MSR_MTRRfix4K_C8000 125</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_MTRRfix4K_D0000">#define MSR_MTRRfix4K_D0000 126</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_MTRRfix4K_D8000">#define MSR_MTRRfix4K_D8000 127</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_MTRRfix4K_E0000">#define MSR_MTRRfix4K_E0000 128</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_MTRRfix4K_E8000">#define MSR_MTRRfix4K_E8000 129</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_MTRRfix4K_F0000">#define MSR_MTRRfix4K_F0000 130</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_MTRRfix4K_F8000">#define MSR_MTRRfix4K_F8000 131</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_MTRRdefType">#define MSR_MTRRdefType 132</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_IA32_MC0_CTL">#define MSR_IA32_MC0_CTL 133</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_IA32_MC0_STATUS">#define MSR_IA32_MC0_STATUS 134</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_IA32_MC0_ADDR">#define MSR_IA32_MC0_ADDR 135</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_IA32_MC0_MISC">#define MSR_IA32_MC0_MISC 136</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_IA32_MC1_CTL">#define MSR_IA32_MC1_CTL 137</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_IA32_MC0_CTL2">#define MSR_IA32_MC0_CTL2 138</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_AMD_PATCHLEVEL">#define MSR_AMD_PATCHLEVEL 139</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_AMD64_TSC_RATIO">#define MSR_AMD64_TSC_RATIO 140</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_IA32_P5_MC_ADDR">#define MSR_IA32_P5_MC_ADDR 141</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_IA32_P5_MC_TYPE">#define MSR_IA32_P5_MC_TYPE 142</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_IA32_TSC">#define MSR_IA32_TSC 143</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_IA32_PLATFORM_ID">#define MSR_IA32_PLATFORM_ID 144</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_IA32_EBL_CR_POWERON">#define MSR_IA32_EBL_CR_POWERON 145</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_IA32_EBC_FREQUENCY_ID">#define MSR_IA32_EBC_FREQUENCY_ID 146</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_IA32_FEATURE_CONTROL">#define MSR_IA32_FEATURE_CONTROL 147</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_IA32_SYSENTER_CS">#define MSR_IA32_SYSENTER_CS 148</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_IA32_SYSENTER_ESP">#define MSR_IA32_SYSENTER_ESP 149</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_IA32_SYSENTER_EIP">#define MSR_IA32_SYSENTER_EIP 150</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_IA32_MISC_ENABLE">#define MSR_IA32_MISC_ENABLE 151</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_HYPERVISOR">#define MSR_HYPERVISOR 152</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_ANY">#define MSR_ANY 153</li>
-                <li class="list-group-item"><p>Special generic case for specifying arbitrary MSRs</p></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_UNDEFINED">#define MSR_UNDEFINED OrderedDict([(u'ref', OrderedDict([(u'@refid', u'libvmi_8h_1a1bed125f50dc3f39875c539c7538ca1a'), (u'@kindref', u'member'), ('#text', u'MSR_ANY')])), ('#text', u'/* deprecated */')])</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_MSR_ALL">#define MSR_ALL 76</li>
-                <li class="list-group-item"><p>Special generic case for handling MSRs, given their understandably generic treatment for events in Xen and elsewhere. Not relevant for vCPU get/set of register data.</p></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_SCTLR">#define SCTLR 77</li>
-                <li class="list-group-item"><p>ARM32 Registers</p></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_CPSR">#define CPSR 78</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_TTBCR">#define TTBCR 79</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_TTBR0">#define TTBR0 80</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_TTBR1">#define TTBR1 81</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_R0">#define R0 82</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_R1">#define R1 83</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_R2">#define R2 84</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_R3">#define R3 85</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_R4">#define R4 86</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_R5">#define R5 87</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_R6">#define R6 88</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_R7">#define R7 89</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_SPSR_SVC">#define SPSR_SVC 90</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_SPSR_FIQ">#define SPSR_FIQ 91</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_SPSR_IRQ">#define SPSR_IRQ 92</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_SPSR_UND">#define SPSR_UND 93</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_SPSR_ABT">#define SPSR_ABT 94</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_LR_IRQ">#define LR_IRQ 95</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_SP_IRQ">#define SP_IRQ 96</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_LR_SVC">#define LR_SVC 97</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_SP_SVC">#define SP_SVC 98</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_LR_ABT">#define LR_ABT 99</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_SP_ABT">#define SP_ABT 100</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_LR_UND">#define LR_UND 101</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_SP_UND">#define SP_UND 102</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_R8_FIQ">#define R8_FIQ 103</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_R9_FIQ">#define R9_FIQ 104</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_R10_FIQ">#define R10_FIQ 105</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_R11_FIQ">#define R11_FIQ 106</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_R12_FIQ">#define R12_FIQ 107</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_SP_FIQ">#define SP_FIQ 108</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_LR_FIQ">#define LR_FIQ 109</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_PC">#define PC 118</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_SP_USR">#define SP_USR R13</li>
-                <li class="list-group-item"><p>Compatibility naming</p></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_LR_USR">#define LR_USR R14</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_PC32">#define PC32 PC</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_SP_EL0">#define SP_EL0 110</li>
-                <li class="list-group-item"><p>ARM64 register</p></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_SP_EL1">#define SP_EL1 111</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_ELR_EL1">#define ELR_EL1 112</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X0">#define X0 R0</li>
-                <li class="list-group-item"><p>Many ARM64 registers are architecturally mapped over ARM32 registers</p></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X1">#define X1 R1</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X2">#define X2 R2</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X3">#define X3 R3</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X4">#define X4 R4</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X5">#define X5 R5</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X6">#define X6 R6</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X7">#define X7 R7</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X8">#define X8 R8</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X9">#define X9 R9</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X10">#define X10 R10</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X11">#define X11 R11</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X12">#define X12 R12</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X13">#define X13 R13</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X14">#define X14 R14</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X15">#define X15 R15</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X16">#define X16 LR_IRQ</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X17">#define X17 SP_IRQ</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X18">#define X18 LR_SVC</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X19">#define X19 SP_SVC</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X20">#define X20 LR_ABT</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X21">#define X21 SP_ABT</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X22">#define X22 LR_UND</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X23">#define X23 SP_UND</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X24">#define X24 R8_FIQ</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X25">#define X25 R9_FIQ</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X26">#define X26 R10_FIQ</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X27">#define X27 R11_FIQ</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X28">#define X28 R12_FIQ</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X29">#define X29 SP_FIQ</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_X30">#define X30 LR_FIQ</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_PC64">#define PC64 PC</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_SPSR_EL1">#define SPSR_EL1 SPSR_SVC</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_TCR_EL1">#define TCR_EL1 TTBCR</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_VMI_GET_BIT">#define VMI_GET_BIT (reg, bit)</li>
-                <li class="list-group-item"><p>Macro to test bitfield values (up to 64-bits)</p><p><strong>Value</strong><br /><small><pre>(!!(reg &amp; (1ULL&lt;&lt;bit)))</pre></small></p></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="macro_VMI_BIT_MASK">#define VMI_BIT_MASK (a, b)</li>
-                <li class="list-group-item"><p>Macro to compute bitfield masks (up to 64-bits)</p><p><strong>Value</strong><br /><small><pre>(((unsigned long long) -1 &gt;&gt; (63 - (b))) &amp; ~((1ULL &lt;&lt; (a)) - 1))</pre></small></p></li>
-                </ul>
-                </td></tr>
-</table>
-<h2 id='Typedefs'>Typedefs</h2>
-<table class='table'>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="typedef_vmi_mode_t">typedef enum vmi_mode  vmi_mode_t</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="typedef_vmi_config_t">typedef enum vmi_config  vmi_config_t</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="typedef_status_t">typedef enum status  status_t</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="typedef_vmi_init_error_t">typedef enum vmi_init_error  vmi_init_error_t</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="typedef_os_t">typedef enum os  os_t</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="typedef_win_ver_t">typedef enum win_ver  win_ver_t</li>
-                <li class="list-group-item"><p>Windows version enumeration.</p></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="typedef_page_mode_t">typedef enum page_mode  page_mode_t</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="typedef_page_size_t">typedef enum page_size  page_size_t</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="typedef_reg_t">typedef uint64_t reg_t</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="typedef_mtrr_regs_t">typedef struct x86_mtrr_regs  mtrr_regs_t</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="typedef_x86_registers_t">typedef struct x86_regs  x86_registers_t</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="typedef_arm_registers_t">typedef struct arm_registers  arm_registers_t</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="typedef_registers_t">typedef struct registers  registers_t</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="typedef_xsave_area_t">typedef struct xsave_area  xsave_area_t</li>
-                <li class="list-group-item"></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="typedef_addr_t">typedef uint64_t addr_t</li>
-                <li class="list-group-item"><p>typedef for forward compatibility with 64-bit guests</p></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="typedef_vmi_pid_t">typedef int32_t vmi_pid_t</li>
-                <li class="list-group-item"><p>type def for consistent pid_t usage</p></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="typedef_page_info_t">typedef struct page_info  page_info_t</li>
-                <li class="list-group-item"><p>Struct for holding page lookup information</p></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="typedef_translation_mechanism_t">typedef enum translation_mechanism  translation_mechanism_t</li>
-                <li class="list-group-item"><p>Available translation mechanism for v2p conversion.</p></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="typedef_vmi_arch_t">typedef enum arch  vmi_arch_t</li>
-                <li class="list-group-item"><p>Supported architectures by LibVMI</p></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="typedef_unicode_string_t">typedef struct _ustring  unicode_string_t</li>
-                <li class="list-group-item"><p>Generic representation of Unicode string to be used within libvmi</p></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="typedef_vmi_instance_t">typedef struct vmi_instance* vmi_instance_t</li>
-                <li class="list-group-item"><p>This struct holds all of the relavent information for an instance of LibVMI. Each time a new domain is accessed, a new instance must be created using the vmi_init function. When you are done with an instance, its resources can be freed using the vmi_destroy function.</p></li>
-                </ul>
-                </td></tr>
-</table>
-<h2 id='Enums'>Enums</h2>
-<table class='table'>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="enum_vmi_mode">enum vmi_mode</li>
-                <li class="list-group-item"><table class='table table-condensed table-striped'><tr><td>VMI_XEN</td><td>libvmi is monitoring a Xen VM</td></tr><tr><td>VMI_KVM</td><td>libvmi is monitoring a KVM VM</td></tr><tr><td>VMI_FILE</td><td>libvmi is viewing a file on disk</td></tr><tr><td>VMI_BAREFLANK</td><td><libvmi is monitoring a Bareflank VM</td></tr></table></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="enum_vmi_config">enum vmi_config</li>
-                <li class="list-group-item"><table class='table table-condensed table-striped'><tr><td>VMI_CONFIG_GLOBAL_FILE_ENTRY</td><td>config in file provided</td></tr><tr><td>VMI_CONFIG_STRING</td><td>config string provided</td></tr><tr><td>VMI_CONFIG_GHASHTABLE</td><td>config GHashTable provided</td></tr><tr><td>VMI_CONFIG_JSON_PATH</td><td>config in json file at the location provided</td></tr></table></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="enum_status">enum status</li>
-                <li class="list-group-item"><table class='table table-condensed table-striped'><tr><td>VMI_SUCCESS</td><td>return value indicating success</td></tr><tr><td>VMI_FAILURE</td><td>return value indicating failure</td></tr></table></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="enum_vmi_init_error">enum vmi_init_error</li>
-                <li class="list-group-item"><table class='table table-condensed table-striped'><tr><td>VMI_INIT_ERROR_NONE</td><td>No error</td></tr><tr><td>VMI_INIT_ERROR_DRIVER_NOT_DETECTED</td><td>Failed to auto-detect hypervisor</td></tr><tr><td>VMI_INIT_ERROR_DRIVER</td><td>Failed to initialize hypervisor-driver</td></tr><tr><td>VMI_INIT_ERROR_VM_NOT_FOUND</td><td>Failed to find the specified VM</td></tr><tr><td>VMI_INIT_ERROR_PAGING</td><td>Failed to determine or initialize paging functions</td></tr><tr><td>VMI_INIT_ERROR_OS</td><td>Failed to determine or initialize OS functions</td></tr><tr><td>VMI_INIT_ERROR_EVENTS</td><td>Failed to initialize events</td></tr><tr><td>VMI_INIT_ERROR_NO_CONFIG</td><td>No configuration was found for OS initialization</td></tr><tr><td>VMI_INIT_ERROR_NO_CONFIG_ENTRY</td><td>Configuration contained no valid entry for VM</td></tr></table></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="enum_os">enum os</li>
-                <li class="list-group-item"><table class='table table-condensed table-striped'><tr><td>VMI_OS_UNKNOWN</td><td>OS type is unknown</td></tr><tr><td>VMI_OS_LINUX</td><td>OS type is Linux</td></tr><tr><td>VMI_OS_WINDOWS</td><td>OS type is Windows</td></tr><tr><td>VMI_OS_FREEBSD</td><td>OS type is FreeBSD</td></tr></table></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="enum_win_ver">enum win_ver</li>
-                <li class="list-group-item"><table class='table table-condensed table-striped'><tr><td>VMI_OS_WINDOWS_NONE</td><td>Not Windows</td></tr><tr><td>VMI_OS_WINDOWS_UNKNOWN</td><td>Is Windows, not sure which</td></tr><tr><td>VMI_OS_WINDOWS_2000</td><td></td></tr><tr><td>VMI_OS_WINDOWS_XP</td><td></td></tr><tr><td>VMI_OS_WINDOWS_2003</td><td></td></tr><tr><td>VMI_OS_WINDOWS_VISTA</td><td></td></tr><tr><td>VMI_OS_WINDOWS_2008</td><td></td></tr><tr><td>VMI_OS_WINDOWS_7</td><td></td></tr><tr><td>VMI_OS_WINDOWS_8</td><td></td></tr><tr><td>VMI_OS_WINDOWS_10</td><td></td></tr></table></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="enum_page_mode">enum page_mode</li>
-                <li class="list-group-item"><table class='table table-condensed table-striped'><tr><td>VMI_PM_UNKNOWN</td><td>page mode unknown</td></tr><tr><td>VMI_PM_LEGACY</td><td>x86 32-bit paging</td></tr><tr><td>VMI_PM_PAE</td><td>x86 PAE paging</td></tr><tr><td>VMI_PM_IA32E</td><td>x86 IA-32e paging</td></tr><tr><td>VMI_PM_AARCH32</td><td>ARM 32-bit paging</td></tr><tr><td>VMI_PM_AARCH64</td><td>ARM 64-bit paging</td></tr></table></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="enum_page_size">enum page_size</li>
-                <li class="list-group-item"><table class='table table-condensed table-striped'><tr><td>VMI_PS_UNKNOWN</td><td>page size unknown</td></tr><tr><td>VMI_PS_1KB</td><td>1KB</td></tr><tr><td>VMI_PS_4KB</td><td>4KB</td></tr><tr><td>VMI_PS_16KB</td><td>16KB</td></tr><tr><td>VMI_PS_64KB</td><td>64KB</td></tr><tr><td>VMI_PS_1MB</td><td>1MB</td></tr><tr><td>VMI_PS_2MB</td><td>2MB</td></tr><tr><td>VMI_PS_4MB</td><td>4MB</td></tr><tr><td>VMI_PS_16MB</td><td>16MB</td></tr><tr><td>VMI_PS_32MB</td><td>32MB</td></tr><tr><td>VMI_PS_512MB</td><td>512MB</td></tr><tr><td>VMI_PS_1GB</td><td>1GB</td></tr></table></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="enum_vmi_init_data_type_t">enum vmi_init_data_type_t</li>
-                <li class="list-group-item"><table class='table table-condensed table-striped'><tr><td>VMI_INIT_DATA_XEN_EVTCHN</td><td>Xen file descriptor</td></tr><tr><td>VMI_INIT_DATA_MEMMAP</td><td></td></tr></table></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="enum_translation_mechanism">enum translation_mechanism</li>
-                <li class="list-group-item"><table class='table table-condensed table-striped'><tr><td>VMI_TM_INVALID</td><td>Invalid translation mechanism</td></tr><tr><td>VMI_TM_NONE</td><td>No translation is required, address is physical address</td></tr><tr><td>VMI_TM_PROCESS_DTB</td><td>Translate addr via specified directory table base.</td></tr><tr><td>VMI_TM_PROCESS_PID</td><td>Translate addr by finding process first to use its DTB.</td></tr><tr><td>VMI_TM_KERNEL_SYMBOL</td><td>Find virtual address of kernel symbol and translate it via kernel DTB.</td></tr></table></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="enum_arch">enum arch</li>
-                <li class="list-group-item"><table class='table table-condensed table-striped'><tr><td>VMI_ARCH_UNKNOWN</td><td>Unknown architecture</td></tr><tr><td>VMI_ARCH_X86</td><td>x86 32-bit architecture</td></tr><tr><td>VMI_ARCH_X86_64</td><td>x86 64-bit architecture</td></tr><tr><td>VMI_ARCH_ARM32</td><td>ARM 32-bit architecture</td></tr><tr><td>VMI_ARCH_ARM64</td><td>ARM 64-bit architecture</td></tr></table></li>
-                </ul>
-                </td></tr>
-</table>
 <h2 id='Functions'>Functions</h2>
 <table class='table'>
 <tr><td>
@@ -2210,6 +767,1449 @@
                 </ul>
                 </td></tr>
 </table>
+<h2 id='Macros'>Macros</h2>
+<table class='table'>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_NOEXCEPT">#define NOEXCEPT </li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_VMI_INIT_DOMAINNAME">#define VMI_INIT_DOMAINNAME (1u << 0)</li>
+                <li class="list-group-item"><p>initialize using domain name</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_VMI_INIT_DOMAINID">#define VMI_INIT_DOMAINID (1u << 1)</li>
+                <li class="list-group-item"><p>initialize using domain id</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_VMI_INIT_EVENTS">#define VMI_INIT_EVENTS (1u << 2)</li>
+                <li class="list-group-item"><p>initialize events</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_VMI_INIT_DOMAINUUID">#define VMI_INIT_DOMAINUUID (1u << 3)</li>
+                <li class="list-group-item"><p>initialize using domain uuid</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_VMI_INIT_DOMAINWATCH">#define VMI_INIT_DOMAINWATCH (1u << 4)</li>
+                <li class="list-group-item"><p>initialize using a domain watcher</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_VMI_PM_INITFLAG_TRANSITION_PAGES">#define VMI_PM_INITFLAG_TRANSITION_PAGES (1u << 0)</li>
+                <li class="list-group-item"><p>Allow the use of transition-pages when checking PTE.present bit. This is a Windows-specific paging feature.</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_VMI_INVALID_DOMID">#define VMI_INVALID_DOMID ~0ULL</li>
+                <li class="list-group-item"><p>invalid domain id</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_EAX">#define EAX 0</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_EBX">#define EBX 1</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_ECX">#define ECX 2</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_EDX">#define EDX 3</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_EBP">#define EBP 4</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_ESI">#define ESI 5</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_EDI">#define EDI 6</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_ESP">#define ESP 7</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_EIP">#define EIP 8</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_EFLAGS">#define EFLAGS 9</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_RAX">#define RAX </li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_RBX">#define RBX EBX</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_RCX">#define RCX ECX</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_RDX">#define RDX EDX</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_RBP">#define RBP EBP</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_RSI">#define RSI ESI</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_RDI">#define RDI EDI</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_RSP">#define RSP ESP</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_RIP">#define RIP EIP</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_RFLAGS">#define RFLAGS EFLAGS</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_R8">#define R8 10</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_R9">#define R9 11</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_R10">#define R10 12</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_R11">#define R11 13</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_R12">#define R12 14</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_R13">#define R13 15</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_R14">#define R14 16</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_R15">#define R15 17</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_CR0">#define CR0 18</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_CR2">#define CR2 19</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_CR3">#define CR3 20</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_CR4">#define CR4 21</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_XCR0">#define XCR0 22</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_DR0">#define DR0 23</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_DR1">#define DR1 24</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_DR2">#define DR2 25</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_DR3">#define DR3 26</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_DR6">#define DR6 27</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_DR7">#define DR7 28</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_CS_SEL">#define CS_SEL 29</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_DS_SEL">#define DS_SEL 30</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_ES_SEL">#define ES_SEL 31</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_FS_SEL">#define FS_SEL 32</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_GS_SEL">#define GS_SEL 33</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_SS_SEL">#define SS_SEL 34</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_TR_SEL">#define TR_SEL 35</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_LDTR_SEL">#define LDTR_SEL 36</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_CS_LIMIT">#define CS_LIMIT 37</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_DS_LIMIT">#define DS_LIMIT 38</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_ES_LIMIT">#define ES_LIMIT 39</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_FS_LIMIT">#define FS_LIMIT 40</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_GS_LIMIT">#define GS_LIMIT 41</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_SS_LIMIT">#define SS_LIMIT 42</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_TR_LIMIT">#define TR_LIMIT 43</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_LDTR_LIMIT">#define LDTR_LIMIT 44</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_IDTR_LIMIT">#define IDTR_LIMIT 45</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_GDTR_LIMIT">#define GDTR_LIMIT 46</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_CS_BASE">#define CS_BASE 47</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_DS_BASE">#define DS_BASE 48</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_ES_BASE">#define ES_BASE 49</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_FS_BASE">#define FS_BASE 50</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_GS_BASE">#define GS_BASE 51</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_SS_BASE">#define SS_BASE 52</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_TR_BASE">#define TR_BASE 53</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_LDTR_BASE">#define LDTR_BASE 54</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_IDTR_BASE">#define IDTR_BASE 55</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_GDTR_BASE">#define GDTR_BASE 56</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_CS_ARBYTES">#define CS_ARBYTES 57</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_DS_ARBYTES">#define DS_ARBYTES 58</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_ES_ARBYTES">#define ES_ARBYTES 59</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_FS_ARBYTES">#define FS_ARBYTES 60</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_GS_ARBYTES">#define GS_ARBYTES 61</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_SS_ARBYTES">#define SS_ARBYTES 62</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_TR_ARBYTES">#define TR_ARBYTES 63</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_LDTR_ARBYTES">#define LDTR_ARBYTES 64</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_SYSENTER_CS">#define SYSENTER_CS 65</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_SYSENTER_ESP">#define SYSENTER_ESP 66</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_SYSENTER_EIP">#define SYSENTER_EIP 67</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_SHADOW_GS">#define SHADOW_GS 68</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_TSC">#define TSC 69</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_FLAGS">#define MSR_FLAGS 70</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_LSTAR">#define MSR_LSTAR 71</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_CSTAR">#define MSR_CSTAR 72</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_SYSCALL_MASK">#define MSR_SYSCALL_MASK 73</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_EFER">#define MSR_EFER 74</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_TSC_AUX">#define MSR_TSC_AUX 75</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_STAR">#define MSR_STAR 119</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_SHADOW_GS_BASE">#define MSR_SHADOW_GS_BASE 120</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_MTRRfix64K_00000">#define MSR_MTRRfix64K_00000 121</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_MTRRfix16K_80000">#define MSR_MTRRfix16K_80000 122</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_MTRRfix16K_A0000">#define MSR_MTRRfix16K_A0000 123</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_MTRRfix4K_C0000">#define MSR_MTRRfix4K_C0000 124</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_MTRRfix4K_C8000">#define MSR_MTRRfix4K_C8000 125</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_MTRRfix4K_D0000">#define MSR_MTRRfix4K_D0000 126</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_MTRRfix4K_D8000">#define MSR_MTRRfix4K_D8000 127</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_MTRRfix4K_E0000">#define MSR_MTRRfix4K_E0000 128</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_MTRRfix4K_E8000">#define MSR_MTRRfix4K_E8000 129</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_MTRRfix4K_F0000">#define MSR_MTRRfix4K_F0000 130</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_MTRRfix4K_F8000">#define MSR_MTRRfix4K_F8000 131</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_MTRRdefType">#define MSR_MTRRdefType 132</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_IA32_MC0_CTL">#define MSR_IA32_MC0_CTL 133</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_IA32_MC0_STATUS">#define MSR_IA32_MC0_STATUS 134</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_IA32_MC0_ADDR">#define MSR_IA32_MC0_ADDR 135</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_IA32_MC0_MISC">#define MSR_IA32_MC0_MISC 136</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_IA32_MC1_CTL">#define MSR_IA32_MC1_CTL 137</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_IA32_MC0_CTL2">#define MSR_IA32_MC0_CTL2 138</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_AMD_PATCHLEVEL">#define MSR_AMD_PATCHLEVEL 139</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_AMD64_TSC_RATIO">#define MSR_AMD64_TSC_RATIO 140</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_IA32_P5_MC_ADDR">#define MSR_IA32_P5_MC_ADDR 141</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_IA32_P5_MC_TYPE">#define MSR_IA32_P5_MC_TYPE 142</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_IA32_TSC">#define MSR_IA32_TSC 143</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_IA32_PLATFORM_ID">#define MSR_IA32_PLATFORM_ID 144</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_IA32_EBL_CR_POWERON">#define MSR_IA32_EBL_CR_POWERON 145</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_IA32_EBC_FREQUENCY_ID">#define MSR_IA32_EBC_FREQUENCY_ID 146</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_IA32_FEATURE_CONTROL">#define MSR_IA32_FEATURE_CONTROL 147</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_IA32_SYSENTER_CS">#define MSR_IA32_SYSENTER_CS 148</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_IA32_SYSENTER_ESP">#define MSR_IA32_SYSENTER_ESP 149</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_IA32_SYSENTER_EIP">#define MSR_IA32_SYSENTER_EIP 150</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_IA32_MISC_ENABLE">#define MSR_IA32_MISC_ENABLE 151</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_HYPERVISOR">#define MSR_HYPERVISOR 152</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_ANY">#define MSR_ANY 153</li>
+                <li class="list-group-item"><p>Special generic case for specifying arbitrary MSRs</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_UNDEFINED">#define MSR_UNDEFINED /* deprecated */</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_MSR_ALL">#define MSR_ALL 76</li>
+                <li class="list-group-item"><p>Special generic case for handling MSRs, given their understandably generic treatment for events in Xen and elsewhere. Not relevant for vCPU get/set of register data.</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_SCTLR">#define SCTLR 77</li>
+                <li class="list-group-item"><p>ARM32 Registers</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_CPSR">#define CPSR 78</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_TTBCR">#define TTBCR 79</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_TTBR0">#define TTBR0 80</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_TTBR1">#define TTBR1 81</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_R0">#define R0 82</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_R1">#define R1 83</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_R2">#define R2 84</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_R3">#define R3 85</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_R4">#define R4 86</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_R5">#define R5 87</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_R6">#define R6 88</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_R7">#define R7 89</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_SPSR_SVC">#define SPSR_SVC 90</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_SPSR_FIQ">#define SPSR_FIQ 91</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_SPSR_IRQ">#define SPSR_IRQ 92</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_SPSR_UND">#define SPSR_UND 93</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_SPSR_ABT">#define SPSR_ABT 94</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_LR_IRQ">#define LR_IRQ 95</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_SP_IRQ">#define SP_IRQ 96</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_LR_SVC">#define LR_SVC 97</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_SP_SVC">#define SP_SVC 98</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_LR_ABT">#define LR_ABT 99</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_SP_ABT">#define SP_ABT 100</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_LR_UND">#define LR_UND 101</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_SP_UND">#define SP_UND 102</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_R8_FIQ">#define R8_FIQ 103</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_R9_FIQ">#define R9_FIQ 104</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_R10_FIQ">#define R10_FIQ 105</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_R11_FIQ">#define R11_FIQ 106</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_R12_FIQ">#define R12_FIQ 107</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_SP_FIQ">#define SP_FIQ 108</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_LR_FIQ">#define LR_FIQ 109</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_PC">#define PC 118</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_SP_USR">#define SP_USR R13</li>
+                <li class="list-group-item"><p>Compatibility naming</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_LR_USR">#define LR_USR R14</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_PC32">#define PC32 PC</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_SP_EL0">#define SP_EL0 110</li>
+                <li class="list-group-item"><p>ARM64 register</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_SP_EL1">#define SP_EL1 111</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_ELR_EL1">#define ELR_EL1 112</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X0">#define X0 R0</li>
+                <li class="list-group-item"><p>Many ARM64 registers are architecturally mapped over ARM32 registers</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X1">#define X1 R1</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X2">#define X2 R2</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X3">#define X3 R3</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X4">#define X4 R4</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X5">#define X5 R5</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X6">#define X6 R6</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X7">#define X7 R7</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X8">#define X8 R8</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X9">#define X9 R9</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X10">#define X10 R10</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X11">#define X11 R11</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X12">#define X12 R12</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X13">#define X13 R13</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X14">#define X14 R14</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X15">#define X15 R15</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X16">#define X16 LR_IRQ</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X17">#define X17 SP_IRQ</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X18">#define X18 LR_SVC</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X19">#define X19 SP_SVC</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X20">#define X20 LR_ABT</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X21">#define X21 SP_ABT</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X22">#define X22 LR_UND</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X23">#define X23 SP_UND</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X24">#define X24 R8_FIQ</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X25">#define X25 R9_FIQ</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X26">#define X26 R10_FIQ</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X27">#define X27 R11_FIQ</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X28">#define X28 R12_FIQ</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X29">#define X29 SP_FIQ</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_X30">#define X30 LR_FIQ</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_PC64">#define PC64 PC</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_SPSR_EL1">#define SPSR_EL1 SPSR_SVC</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_TCR_EL1">#define TCR_EL1 TTBCR</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_VMI_GET_BIT">#define VMI_GET_BIT (reg, bit)</li>
+                <li class="list-group-item"><p>Macro to test bitfield values (up to 64-bits)</p><p><strong>Value</strong><br /><small><pre>(!!(reg &amp; (1ULL&lt;&lt;bit)))</pre></small></p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_VMI_BIT_MASK">#define VMI_BIT_MASK (a, b)</li>
+                <li class="list-group-item"><p>Macro to compute bitfield masks (up to 64-bits)</p><p><strong>Value</strong><br /><small><pre>(((unsigned long long) -1 &gt;&gt; (63 - (b))) &amp; ~((1ULL &lt;&lt; (a)) - 1))</pre></small></p></li>
+                </ul>
+                </td></tr>
+</table>
+<h2 id='Typedefs'>Typedefs</h2>
+<table class='table'>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="typedef_vmi_mode_t">typedef enum vmi_mode  vmi_mode_t</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="typedef_vmi_config_t">typedef enum vmi_config  vmi_config_t</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="typedef_status_t">typedef enum status  status_t</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="typedef_vmi_init_error_t">typedef enum vmi_init_error  vmi_init_error_t</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="typedef_os_t">typedef enum os  os_t</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="typedef_win_ver_t">typedef enum win_ver  win_ver_t</li>
+                <li class="list-group-item"><p>Windows version enumeration.</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="typedef_page_mode_t">typedef enum page_mode  page_mode_t</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="typedef_page_size_t">typedef enum page_size  page_size_t</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="typedef_reg_t">typedef uint64_t reg_t</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="typedef_mtrr_regs_t">typedef struct x86_mtrr_regs  mtrr_regs_t</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="typedef_x86_registers_t">typedef struct x86_regs  x86_registers_t</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="typedef_arm_registers_t">typedef struct arm_registers  arm_registers_t</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="typedef_registers_t">typedef struct registers  registers_t</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="typedef_xsave_area_t">typedef struct xsave_area  xsave_area_t</li>
+                <li class="list-group-item"></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="typedef_addr_t">typedef uint64_t addr_t</li>
+                <li class="list-group-item"><p>typedef for forward compatibility with 64-bit guests</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="typedef_vmi_pid_t">typedef int32_t vmi_pid_t</li>
+                <li class="list-group-item"><p>type def for consistent pid_t usage</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="typedef_page_info_t">typedef struct page_info  page_info_t</li>
+                <li class="list-group-item"><p>Struct for holding page lookup information</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="typedef_translation_mechanism_t">typedef enum translation_mechanism  translation_mechanism_t</li>
+                <li class="list-group-item"><p>Available translation mechanism for v2p conversion.</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="typedef_vmi_arch_t">typedef enum arch  vmi_arch_t</li>
+                <li class="list-group-item"><p>Supported architectures by LibVMI</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="typedef_unicode_string_t">typedef struct _ustring  unicode_string_t</li>
+                <li class="list-group-item"><p>Generic representation of Unicode string to be used within libvmi</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="typedef_vmi_instance_t">typedef struct vmi_instance* vmi_instance_t</li>
+                <li class="list-group-item"><p>This struct holds all of the relavent information for an instance of LibVMI. Each time a new domain is accessed, a new instance must be created using the vmi_init function. When you are done with an instance, its resources can be freed using the vmi_destroy function.</p></li>
+                </ul>
+                </td></tr>
+</table>
+<h2 id='Enums'>Enums</h2>
+<table class='table'>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="enum_vmi_mode">enum vmi_mode</li>
+                <li class="list-group-item"><table class='table table-condensed table-striped'><tr><td>VMI_XEN</td><td>libvmi is monitoring a Xen VM</td></tr><tr><td>VMI_KVM</td><td>libvmi is monitoring a KVM VM</td></tr><tr><td>VMI_FILE</td><td>libvmi is viewing a file on disk</td></tr><tr><td>VMI_BAREFLANK</td><td><libvmi is monitoring a Bareflank VM</td></tr></table></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="enum_vmi_config">enum vmi_config</li>
+                <li class="list-group-item"><table class='table table-condensed table-striped'><tr><td>VMI_CONFIG_GLOBAL_FILE_ENTRY</td><td>config in file provided</td></tr><tr><td>VMI_CONFIG_STRING</td><td>config string provided</td></tr><tr><td>VMI_CONFIG_GHASHTABLE</td><td>config GHashTable provided</td></tr><tr><td>VMI_CONFIG_JSON_PATH</td><td>config in json file at the location provided</td></tr></table></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="enum_status">enum status</li>
+                <li class="list-group-item"><table class='table table-condensed table-striped'><tr><td>VMI_SUCCESS</td><td>return value indicating success</td></tr><tr><td>VMI_FAILURE</td><td>return value indicating failure</td></tr></table></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="enum_vmi_init_error">enum vmi_init_error</li>
+                <li class="list-group-item"><table class='table table-condensed table-striped'><tr><td>VMI_INIT_ERROR_NONE</td><td>No error</td></tr><tr><td>VMI_INIT_ERROR_DRIVER_NOT_DETECTED</td><td>Failed to auto-detect hypervisor</td></tr><tr><td>VMI_INIT_ERROR_DRIVER</td><td>Failed to initialize hypervisor-driver</td></tr><tr><td>VMI_INIT_ERROR_VM_NOT_FOUND</td><td>Failed to find the specified VM</td></tr><tr><td>VMI_INIT_ERROR_PAGING</td><td>Failed to determine or initialize paging functions</td></tr><tr><td>VMI_INIT_ERROR_OS</td><td>Failed to determine or initialize OS functions</td></tr><tr><td>VMI_INIT_ERROR_EVENTS</td><td>Failed to initialize events</td></tr><tr><td>VMI_INIT_ERROR_NO_CONFIG</td><td>No configuration was found for OS initialization</td></tr><tr><td>VMI_INIT_ERROR_NO_CONFIG_ENTRY</td><td>Configuration contained no valid entry for VM</td></tr></table></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="enum_os">enum os</li>
+                <li class="list-group-item"><table class='table table-condensed table-striped'><tr><td>VMI_OS_UNKNOWN</td><td>OS type is unknown</td></tr><tr><td>VMI_OS_LINUX</td><td>OS type is Linux</td></tr><tr><td>VMI_OS_WINDOWS</td><td>OS type is Windows</td></tr><tr><td>VMI_OS_FREEBSD</td><td>OS type is FreeBSD</td></tr></table></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="enum_win_ver">enum win_ver</li>
+                <li class="list-group-item"><table class='table table-condensed table-striped'><tr><td>VMI_OS_WINDOWS_NONE</td><td>Not Windows</td></tr><tr><td>VMI_OS_WINDOWS_UNKNOWN</td><td>Is Windows, not sure which</td></tr><tr><td>VMI_OS_WINDOWS_2000</td><td></td></tr><tr><td>VMI_OS_WINDOWS_XP</td><td></td></tr><tr><td>VMI_OS_WINDOWS_2003</td><td></td></tr><tr><td>VMI_OS_WINDOWS_VISTA</td><td></td></tr><tr><td>VMI_OS_WINDOWS_2008</td><td></td></tr><tr><td>VMI_OS_WINDOWS_7</td><td></td></tr><tr><td>VMI_OS_WINDOWS_8</td><td></td></tr><tr><td>VMI_OS_WINDOWS_10</td><td></td></tr></table></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="enum_page_mode">enum page_mode</li>
+                <li class="list-group-item"><table class='table table-condensed table-striped'><tr><td>VMI_PM_UNKNOWN</td><td>page mode unknown</td></tr><tr><td>VMI_PM_LEGACY</td><td>x86 32-bit paging</td></tr><tr><td>VMI_PM_PAE</td><td>x86 PAE paging</td></tr><tr><td>VMI_PM_IA32E</td><td>x86 IA-32e paging</td></tr><tr><td>VMI_PM_AARCH32</td><td>ARM 32-bit paging</td></tr><tr><td>VMI_PM_AARCH64</td><td>ARM 64-bit paging</td></tr></table></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="enum_page_size">enum page_size</li>
+                <li class="list-group-item"><table class='table table-condensed table-striped'><tr><td>VMI_PS_UNKNOWN</td><td>page size unknown</td></tr><tr><td>VMI_PS_1KB</td><td>1KB</td></tr><tr><td>VMI_PS_4KB</td><td>4KB</td></tr><tr><td>VMI_PS_16KB</td><td>16KB</td></tr><tr><td>VMI_PS_64KB</td><td>64KB</td></tr><tr><td>VMI_PS_1MB</td><td>1MB</td></tr><tr><td>VMI_PS_2MB</td><td>2MB</td></tr><tr><td>VMI_PS_4MB</td><td>4MB</td></tr><tr><td>VMI_PS_16MB</td><td>16MB</td></tr><tr><td>VMI_PS_32MB</td><td>32MB</td></tr><tr><td>VMI_PS_512MB</td><td>512MB</td></tr><tr><td>VMI_PS_1GB</td><td>1GB</td></tr></table></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="enum_vmi_init_data_type_t">enum vmi_init_data_type_t</li>
+                <li class="list-group-item"><table class='table table-condensed table-striped'><tr><td>VMI_INIT_DATA_XEN_EVTCHN</td><td>Xen file descriptor</td></tr><tr><td>VMI_INIT_DATA_MEMMAP</td><td></td></tr></table></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="enum_translation_mechanism">enum translation_mechanism</li>
+                <li class="list-group-item"><table class='table table-condensed table-striped'><tr><td>VMI_TM_INVALID</td><td>Invalid translation mechanism</td></tr><tr><td>VMI_TM_NONE</td><td>No translation is required, address is physical address</td></tr><tr><td>VMI_TM_PROCESS_DTB</td><td>Translate addr via specified directory table base.</td></tr><tr><td>VMI_TM_PROCESS_PID</td><td>Translate addr by finding process first to use its DTB.</td></tr><tr><td>VMI_TM_KERNEL_SYMBOL</td><td>Find virtual address of kernel symbol and translate it via kernel DTB.</td></tr></table></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="enum_arch">enum arch</li>
+                <li class="list-group-item"><table class='table table-condensed table-striped'><tr><td>VMI_ARCH_UNKNOWN</td><td>Unknown architecture</td></tr><tr><td>VMI_ARCH_X86</td><td>x86 32-bit architecture</td></tr><tr><td>VMI_ARCH_X86_64</td><td>x86 64-bit architecture</td></tr><tr><td>VMI_ARCH_ARM32</td><td>ARM 32-bit architecture</td></tr><tr><td>VMI_ARCH_ARM64</td><td>ARM 64-bit architecture</td></tr></table></li>
+                </ul>
+                </td></tr>
+</table>
 </div>
 
     <nav class="col-xs-3">
@@ -2218,6 +2218,128 @@
 
     <ul class="nav nav-stacked">
     
+<li>
+<a href='#Functions'>Functions</a>
+<ul class='nav nav-stacked'>
+<li><a href='#func_vmi_init'>vmi_init</a></li>
+<li><a href='#func_vmi_init_complete'>vmi_init_complete</a></li>
+<li><a href='#func_vmi_init_paging'>vmi_init_paging</a></li>
+<li><a href='#func_vmi_init_os'>vmi_init_os</a></li>
+<li><a href='#func_vmi_destroy'>vmi_destroy</a></li>
+<li><a href='#func_vmi_get_library_arch'>vmi_get_library_arch</a></li>
+<li><a href='#func_vmi_translate_kv2p'>vmi_translate_kv2p</a></li>
+<li><a href='#func_vmi_translate_uv2p'>vmi_translate_uv2p</a></li>
+<li><a href='#func_vmi_translate_ksym2v'>vmi_translate_ksym2v</a></li>
+<li><a href='#func_vmi_translate_sym2v'>vmi_translate_sym2v</a></li>
+<li><a href='#func_vmi_translate_v2sym'>vmi_translate_v2sym</a></li>
+<li><a href='#func_vmi_translate_v2ksym'>vmi_translate_v2ksym</a></li>
+<li><a href='#func_vmi_pid_to_dtb'>vmi_pid_to_dtb</a></li>
+<li><a href='#func_vmi_dtb_to_pid'>vmi_dtb_to_pid</a></li>
+<li><a href='#func_vmi_pagetable_lookup'>vmi_pagetable_lookup</a></li>
+<li><a href='#func_vmi_pagetable_lookup_extended'>vmi_pagetable_lookup_extended</a></li>
+<li><a href='#func_vmi_read'>vmi_read</a></li>
+<li><a href='#func_vmi_read_8'>vmi_read_8</a></li>
+<li><a href='#func_vmi_read_16'>vmi_read_16</a></li>
+<li><a href='#func_vmi_read_32'>vmi_read_32</a></li>
+<li><a href='#func_vmi_read_64'>vmi_read_64</a></li>
+<li><a href='#func_vmi_read_addr'>vmi_read_addr</a></li>
+<li><a href='#func_vmi_read_str'>vmi_read_str</a></li>
+<li><a href='#func_vmi_read_unicode_str'>vmi_read_unicode_str</a></li>
+<li><a href='#func_vmi_read_unicode_str_pm'>vmi_read_unicode_str_pm</a></li>
+<li><a href='#func_vmi_read_ksym'>vmi_read_ksym</a></li>
+<li><a href='#func_vmi_read_va'>vmi_read_va</a></li>
+<li><a href='#func_vmi_mmap_guest'>vmi_mmap_guest</a></li>
+<li><a href='#func_vmi_read_pa'>vmi_read_pa</a></li>
+<li><a href='#func_vmi_read_8_ksym'>vmi_read_8_ksym</a></li>
+<li><a href='#func_vmi_read_16_ksym'>vmi_read_16_ksym</a></li>
+<li><a href='#func_vmi_read_32_ksym'>vmi_read_32_ksym</a></li>
+<li><a href='#func_vmi_read_64_ksym'>vmi_read_64_ksym</a></li>
+<li><a href='#func_vmi_read_addr_ksym'>vmi_read_addr_ksym</a></li>
+<li><a href='#func_vmi_read_str_ksym'>vmi_read_str_ksym</a></li>
+<li><a href='#func_vmi_read_8_va'>vmi_read_8_va</a></li>
+<li><a href='#func_vmi_read_16_va'>vmi_read_16_va</a></li>
+<li><a href='#func_vmi_read_32_va'>vmi_read_32_va</a></li>
+<li><a href='#func_vmi_read_64_va'>vmi_read_64_va</a></li>
+<li><a href='#func_vmi_read_addr_va'>vmi_read_addr_va</a></li>
+<li><a href='#func_vmi_read_str_va'>vmi_read_str_va</a></li>
+<li><a href='#func_vmi_read_unicode_str_va'>vmi_read_unicode_str_va</a></li>
+<li><a href='#func_vmi_convert_str_encoding'>vmi_convert_str_encoding</a></li>
+<li><a href='#func_vmi_free_unicode_str'>vmi_free_unicode_str</a></li>
+<li><a href='#func_vmi_read_8_pa'>vmi_read_8_pa</a></li>
+<li><a href='#func_vmi_read_16_pa'>vmi_read_16_pa</a></li>
+<li><a href='#func_vmi_read_32_pa'>vmi_read_32_pa</a></li>
+<li><a href='#func_vmi_read_64_pa'>vmi_read_64_pa</a></li>
+<li><a href='#func_vmi_read_addr_pa'>vmi_read_addr_pa</a></li>
+<li><a href='#func_vmi_read_str_pa'>vmi_read_str_pa</a></li>
+<li><a href='#func_vmi_write'>vmi_write</a></li>
+<li><a href='#func_vmi_write_ksym'>vmi_write_ksym</a></li>
+<li><a href='#func_vmi_write_va'>vmi_write_va</a></li>
+<li><a href='#func_vmi_write_pa'>vmi_write_pa</a></li>
+<li><a href='#func_vmi_write_8'>vmi_write_8</a></li>
+<li><a href='#func_vmi_write_16'>vmi_write_16</a></li>
+<li><a href='#func_vmi_write_32'>vmi_write_32</a></li>
+<li><a href='#func_vmi_write_64'>vmi_write_64</a></li>
+<li><a href='#func_vmi_write_addr'>vmi_write_addr</a></li>
+<li><a href='#func_vmi_write_8_ksym'>vmi_write_8_ksym</a></li>
+<li><a href='#func_vmi_write_16_ksym'>vmi_write_16_ksym</a></li>
+<li><a href='#func_vmi_write_32_ksym'>vmi_write_32_ksym</a></li>
+<li><a href='#func_vmi_write_64_ksym'>vmi_write_64_ksym</a></li>
+<li><a href='#func_vmi_write_addr_ksym'>vmi_write_addr_ksym</a></li>
+<li><a href='#func_vmi_write_8_va'>vmi_write_8_va</a></li>
+<li><a href='#func_vmi_write_16_va'>vmi_write_16_va</a></li>
+<li><a href='#func_vmi_write_32_va'>vmi_write_32_va</a></li>
+<li><a href='#func_vmi_write_64_va'>vmi_write_64_va</a></li>
+<li><a href='#func_vmi_write_addr_va'>vmi_write_addr_va</a></li>
+<li><a href='#func_vmi_write_8_pa'>vmi_write_8_pa</a></li>
+<li><a href='#func_vmi_write_16_pa'>vmi_write_16_pa</a></li>
+<li><a href='#func_vmi_write_32_pa'>vmi_write_32_pa</a></li>
+<li><a href='#func_vmi_write_64_pa'>vmi_write_64_pa</a></li>
+<li><a href='#func_vmi_write_addr_pa'>vmi_write_addr_pa</a></li>
+<li><a href='#func_vmi_print_hex'>vmi_print_hex</a></li>
+<li><a href='#func_vmi_print_hex_ksym'>vmi_print_hex_ksym</a></li>
+<li><a href='#func_vmi_print_hex_va'>vmi_print_hex_va</a></li>
+<li><a href='#func_vmi_print_hex_pa'>vmi_print_hex_pa</a></li>
+<li><a href='#func_vmi_get_name'>vmi_get_name</a></li>
+<li><a href='#func_vmi_get_vmid'>vmi_get_vmid</a></li>
+<li><a href='#func_vmi_get_access_mode'>vmi_get_access_mode</a></li>
+<li><a href='#func_vmi_get_page_mode'>vmi_get_page_mode</a></li>
+<li><a href='#func_vmi_get_address_width'>vmi_get_address_width</a></li>
+<li><a href='#func_vmi_get_ostype'>vmi_get_ostype</a></li>
+<li><a href='#func_vmi_get_windows_build_info'>vmi_get_windows_build_info</a></li>
+<li><a href='#func_vmi_get_winver'>vmi_get_winver</a></li>
+<li><a href='#func_vmi_get_win_buildnumber'>vmi_get_win_buildnumber</a></li>
+<li><a href='#func_vmi_get_winver_str'>vmi_get_winver_str</a></li>
+<li><a href='#func_vmi_get_winver_manual'>vmi_get_winver_manual</a></li>
+<li><a href='#func_vmi_get_offset'>vmi_get_offset</a></li>
+<li><a href='#func_vmi_get_kernel_struct_offset'>vmi_get_kernel_struct_offset</a></li>
+<li><a href='#func_vmi_get_xsave_info'>vmi_get_xsave_info</a></li>
+<li><a href='#func_vmi_get_memsize'>vmi_get_memsize</a></li>
+<li><a href='#func_vmi_get_max_physical_address'>vmi_get_max_physical_address</a></li>
+<li><a href='#func_vmi_get_num_vcpus'>vmi_get_num_vcpus</a></li>
+<li><a href='#func_vmi_request_page_fault'>vmi_request_page_fault</a></li>
+<li><a href='#func_vmi_get_tsc_info'>vmi_get_tsc_info</a></li>
+<li><a href='#func_vmi_get_vcpumtrr'>vmi_get_vcpumtrr</a></li>
+<li><a href='#func_vmi_get_vcpureg'>vmi_get_vcpureg</a></li>
+<li><a href='#func_vmi_get_vcpuregs'>vmi_get_vcpuregs</a></li>
+<li><a href='#func_vmi_set_vcpureg'>vmi_set_vcpureg</a></li>
+<li><a href='#func_vmi_set_vcpuregs'>vmi_set_vcpuregs</a></li>
+<li><a href='#func_vmi_pause_vm'>vmi_pause_vm</a></li>
+<li><a href='#func_vmi_resume_vm'>vmi_resume_vm</a></li>
+<li><a href='#func_vmi_v2pcache_flush'>vmi_v2pcache_flush</a></li>
+<li><a href='#func_vmi_v2pcache_add'>vmi_v2pcache_add</a></li>
+<li><a href='#func_vmi_symcache_flush'>vmi_symcache_flush</a></li>
+<li><a href='#func_vmi_symcache_add'>vmi_symcache_add</a></li>
+<li><a href='#func_vmi_rvacache_flush'>vmi_rvacache_flush</a></li>
+<li><a href='#func_vmi_rvacache_add'>vmi_rvacache_add</a></li>
+<li><a href='#func_vmi_pidcache_flush'>vmi_pidcache_flush</a></li>
+<li><a href='#func_vmi_pidcache_add'>vmi_pidcache_add</a></li>
+<li><a href='#func_vmi_pagecache_flush'>vmi_pagecache_flush</a></li>
+<li><a href='#func_vmi_get_linux_sysmap'>vmi_get_linux_sysmap</a></li>
+<li><a href='#func_vmi_get_freebsd_sysmap'>vmi_get_freebsd_sysmap</a></li>
+<li><a href='#func_vmi_get_rekall_path'>vmi_get_rekall_path</a></li>
+<li><a href='#func_vmi_get_os_profile_path'>vmi_get_os_profile_path</a></li>
+</ul>
+</li>
 <li>
 <a href='#Macros'>Macros</a>
 <ul class='nav nav-stacked'>
@@ -2470,128 +2592,6 @@
 <li><a href='#enum_vmi_init_data_type_t'>vmi_init_data_type_t</a></li>
 <li><a href='#enum_translation_mechanism'>translation_mechanism</a></li>
 <li><a href='#enum_arch'>arch</a></li>
-</ul>
-</li>
-<li>
-<a href='#Functions'>Functions</a>
-<ul class='nav nav-stacked'>
-<li><a href='#func_vmi_init'>vmi_init</a></li>
-<li><a href='#func_vmi_init_complete'>vmi_init_complete</a></li>
-<li><a href='#func_vmi_init_paging'>vmi_init_paging</a></li>
-<li><a href='#func_vmi_init_os'>vmi_init_os</a></li>
-<li><a href='#func_vmi_destroy'>vmi_destroy</a></li>
-<li><a href='#func_vmi_get_library_arch'>vmi_get_library_arch</a></li>
-<li><a href='#func_vmi_translate_kv2p'>vmi_translate_kv2p</a></li>
-<li><a href='#func_vmi_translate_uv2p'>vmi_translate_uv2p</a></li>
-<li><a href='#func_vmi_translate_ksym2v'>vmi_translate_ksym2v</a></li>
-<li><a href='#func_vmi_translate_sym2v'>vmi_translate_sym2v</a></li>
-<li><a href='#func_vmi_translate_v2sym'>vmi_translate_v2sym</a></li>
-<li><a href='#func_vmi_translate_v2ksym'>vmi_translate_v2ksym</a></li>
-<li><a href='#func_vmi_pid_to_dtb'>vmi_pid_to_dtb</a></li>
-<li><a href='#func_vmi_dtb_to_pid'>vmi_dtb_to_pid</a></li>
-<li><a href='#func_vmi_pagetable_lookup'>vmi_pagetable_lookup</a></li>
-<li><a href='#func_vmi_pagetable_lookup_extended'>vmi_pagetable_lookup_extended</a></li>
-<li><a href='#func_vmi_read'>vmi_read</a></li>
-<li><a href='#func_vmi_read_8'>vmi_read_8</a></li>
-<li><a href='#func_vmi_read_16'>vmi_read_16</a></li>
-<li><a href='#func_vmi_read_32'>vmi_read_32</a></li>
-<li><a href='#func_vmi_read_64'>vmi_read_64</a></li>
-<li><a href='#func_vmi_read_addr'>vmi_read_addr</a></li>
-<li><a href='#func_vmi_read_str'>vmi_read_str</a></li>
-<li><a href='#func_vmi_read_unicode_str'>vmi_read_unicode_str</a></li>
-<li><a href='#func_vmi_read_unicode_str_pm'>vmi_read_unicode_str_pm</a></li>
-<li><a href='#func_vmi_read_ksym'>vmi_read_ksym</a></li>
-<li><a href='#func_vmi_read_va'>vmi_read_va</a></li>
-<li><a href='#func_vmi_mmap_guest'>vmi_mmap_guest</a></li>
-<li><a href='#func_vmi_read_pa'>vmi_read_pa</a></li>
-<li><a href='#func_vmi_read_8_ksym'>vmi_read_8_ksym</a></li>
-<li><a href='#func_vmi_read_16_ksym'>vmi_read_16_ksym</a></li>
-<li><a href='#func_vmi_read_32_ksym'>vmi_read_32_ksym</a></li>
-<li><a href='#func_vmi_read_64_ksym'>vmi_read_64_ksym</a></li>
-<li><a href='#func_vmi_read_addr_ksym'>vmi_read_addr_ksym</a></li>
-<li><a href='#func_vmi_read_str_ksym'>vmi_read_str_ksym</a></li>
-<li><a href='#func_vmi_read_8_va'>vmi_read_8_va</a></li>
-<li><a href='#func_vmi_read_16_va'>vmi_read_16_va</a></li>
-<li><a href='#func_vmi_read_32_va'>vmi_read_32_va</a></li>
-<li><a href='#func_vmi_read_64_va'>vmi_read_64_va</a></li>
-<li><a href='#func_vmi_read_addr_va'>vmi_read_addr_va</a></li>
-<li><a href='#func_vmi_read_str_va'>vmi_read_str_va</a></li>
-<li><a href='#func_vmi_read_unicode_str_va'>vmi_read_unicode_str_va</a></li>
-<li><a href='#func_vmi_convert_str_encoding'>vmi_convert_str_encoding</a></li>
-<li><a href='#func_vmi_free_unicode_str'>vmi_free_unicode_str</a></li>
-<li><a href='#func_vmi_read_8_pa'>vmi_read_8_pa</a></li>
-<li><a href='#func_vmi_read_16_pa'>vmi_read_16_pa</a></li>
-<li><a href='#func_vmi_read_32_pa'>vmi_read_32_pa</a></li>
-<li><a href='#func_vmi_read_64_pa'>vmi_read_64_pa</a></li>
-<li><a href='#func_vmi_read_addr_pa'>vmi_read_addr_pa</a></li>
-<li><a href='#func_vmi_read_str_pa'>vmi_read_str_pa</a></li>
-<li><a href='#func_vmi_write'>vmi_write</a></li>
-<li><a href='#func_vmi_write_ksym'>vmi_write_ksym</a></li>
-<li><a href='#func_vmi_write_va'>vmi_write_va</a></li>
-<li><a href='#func_vmi_write_pa'>vmi_write_pa</a></li>
-<li><a href='#func_vmi_write_8'>vmi_write_8</a></li>
-<li><a href='#func_vmi_write_16'>vmi_write_16</a></li>
-<li><a href='#func_vmi_write_32'>vmi_write_32</a></li>
-<li><a href='#func_vmi_write_64'>vmi_write_64</a></li>
-<li><a href='#func_vmi_write_addr'>vmi_write_addr</a></li>
-<li><a href='#func_vmi_write_8_ksym'>vmi_write_8_ksym</a></li>
-<li><a href='#func_vmi_write_16_ksym'>vmi_write_16_ksym</a></li>
-<li><a href='#func_vmi_write_32_ksym'>vmi_write_32_ksym</a></li>
-<li><a href='#func_vmi_write_64_ksym'>vmi_write_64_ksym</a></li>
-<li><a href='#func_vmi_write_addr_ksym'>vmi_write_addr_ksym</a></li>
-<li><a href='#func_vmi_write_8_va'>vmi_write_8_va</a></li>
-<li><a href='#func_vmi_write_16_va'>vmi_write_16_va</a></li>
-<li><a href='#func_vmi_write_32_va'>vmi_write_32_va</a></li>
-<li><a href='#func_vmi_write_64_va'>vmi_write_64_va</a></li>
-<li><a href='#func_vmi_write_addr_va'>vmi_write_addr_va</a></li>
-<li><a href='#func_vmi_write_8_pa'>vmi_write_8_pa</a></li>
-<li><a href='#func_vmi_write_16_pa'>vmi_write_16_pa</a></li>
-<li><a href='#func_vmi_write_32_pa'>vmi_write_32_pa</a></li>
-<li><a href='#func_vmi_write_64_pa'>vmi_write_64_pa</a></li>
-<li><a href='#func_vmi_write_addr_pa'>vmi_write_addr_pa</a></li>
-<li><a href='#func_vmi_print_hex'>vmi_print_hex</a></li>
-<li><a href='#func_vmi_print_hex_ksym'>vmi_print_hex_ksym</a></li>
-<li><a href='#func_vmi_print_hex_va'>vmi_print_hex_va</a></li>
-<li><a href='#func_vmi_print_hex_pa'>vmi_print_hex_pa</a></li>
-<li><a href='#func_vmi_get_name'>vmi_get_name</a></li>
-<li><a href='#func_vmi_get_vmid'>vmi_get_vmid</a></li>
-<li><a href='#func_vmi_get_access_mode'>vmi_get_access_mode</a></li>
-<li><a href='#func_vmi_get_page_mode'>vmi_get_page_mode</a></li>
-<li><a href='#func_vmi_get_address_width'>vmi_get_address_width</a></li>
-<li><a href='#func_vmi_get_ostype'>vmi_get_ostype</a></li>
-<li><a href='#func_vmi_get_windows_build_info'>vmi_get_windows_build_info</a></li>
-<li><a href='#func_vmi_get_winver'>vmi_get_winver</a></li>
-<li><a href='#func_vmi_get_win_buildnumber'>vmi_get_win_buildnumber</a></li>
-<li><a href='#func_vmi_get_winver_str'>vmi_get_winver_str</a></li>
-<li><a href='#func_vmi_get_winver_manual'>vmi_get_winver_manual</a></li>
-<li><a href='#func_vmi_get_offset'>vmi_get_offset</a></li>
-<li><a href='#func_vmi_get_kernel_struct_offset'>vmi_get_kernel_struct_offset</a></li>
-<li><a href='#func_vmi_get_xsave_info'>vmi_get_xsave_info</a></li>
-<li><a href='#func_vmi_get_memsize'>vmi_get_memsize</a></li>
-<li><a href='#func_vmi_get_max_physical_address'>vmi_get_max_physical_address</a></li>
-<li><a href='#func_vmi_get_num_vcpus'>vmi_get_num_vcpus</a></li>
-<li><a href='#func_vmi_request_page_fault'>vmi_request_page_fault</a></li>
-<li><a href='#func_vmi_get_tsc_info'>vmi_get_tsc_info</a></li>
-<li><a href='#func_vmi_get_vcpumtrr'>vmi_get_vcpumtrr</a></li>
-<li><a href='#func_vmi_get_vcpureg'>vmi_get_vcpureg</a></li>
-<li><a href='#func_vmi_get_vcpuregs'>vmi_get_vcpuregs</a></li>
-<li><a href='#func_vmi_set_vcpureg'>vmi_set_vcpureg</a></li>
-<li><a href='#func_vmi_set_vcpuregs'>vmi_set_vcpuregs</a></li>
-<li><a href='#func_vmi_pause_vm'>vmi_pause_vm</a></li>
-<li><a href='#func_vmi_resume_vm'>vmi_resume_vm</a></li>
-<li><a href='#func_vmi_v2pcache_flush'>vmi_v2pcache_flush</a></li>
-<li><a href='#func_vmi_v2pcache_add'>vmi_v2pcache_add</a></li>
-<li><a href='#func_vmi_symcache_flush'>vmi_symcache_flush</a></li>
-<li><a href='#func_vmi_symcache_add'>vmi_symcache_add</a></li>
-<li><a href='#func_vmi_rvacache_flush'>vmi_rvacache_flush</a></li>
-<li><a href='#func_vmi_rvacache_add'>vmi_rvacache_add</a></li>
-<li><a href='#func_vmi_pidcache_flush'>vmi_pidcache_flush</a></li>
-<li><a href='#func_vmi_pidcache_add'>vmi_pidcache_add</a></li>
-<li><a href='#func_vmi_pagecache_flush'>vmi_pagecache_flush</a></li>
-<li><a href='#func_vmi_get_linux_sysmap'>vmi_get_linux_sysmap</a></li>
-<li><a href='#func_vmi_get_freebsd_sysmap'>vmi_get_freebsd_sysmap</a></li>
-<li><a href='#func_vmi_get_rekall_path'>vmi_get_rekall_path</a></li>
-<li><a href='#func_vmi_get_os_profile_path'>vmi_get_os_profile_path</a></li>
 </ul>
 </li>
 
