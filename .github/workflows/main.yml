@@ -1,4 +1,4 @@
-name: Generate page contents
+name: CI
 
 on:
   schedule:
@@ -9,7 +9,8 @@ on:
     branches: [ source ]
 
 jobs:
-  build:
+  generate_page:
+    name: Generate page contents
     runs-on: ubuntu-latest
     container: jekyll/jekyll:stable
     steps:
