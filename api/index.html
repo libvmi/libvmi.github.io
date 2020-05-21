@@ -79,13 +79,13 @@
 <tr><td>
                 <ul class="list-group">
                 <li class="list-group-item active" id="func_vmi_init_paging">page_mode_t vmi_init_paging (vmi_instance_t vmi, uint64_t flags) NOEXCEPT</li>
-                <li class="list-group-item">None</li>
+                <li class="list-group-item"><p>Initialize or reinitialize the paging specific functionality of LibVMI required for virtual-to-physical translation.</p><p>Note: this function is designed only for live VMs (ie. VMI_XEN or VMI_KVM). and will not work in VMI_FILE mode as that requires OS-specific heuristics.</p><h5>Parameters</h5><ul><li>[in] <em>vmi</em> LibVMI instance</li><li>[in] <em>paging_flags</em> Additional flags to configure paging using VMI_PM_INITFLAG_* values.</li></ul><h5>Returns</h5><ul><li>The page mode that was initialized, or VMI_PM_UNKNOWN.</li></ul></li>
                 </ul>
                 </td></tr>
 <tr><td>
                 <ul class="list-group">
                 <li class="list-group-item active" id="func_vmi_init_os">os_t vmi_init_os (vmi_instance_t vmi, vmi_config_t config_mode, void *config, vmi_init_error_t *error) NOEXCEPT</li>
-                <li class="list-group-item">None</li>
+                <li class="list-group-item"><p>Initialize the OS specific functionality of LibVMI required for functions such as vmi_*_ksym. If the user hasn't called vmi_init_paging yet, this function will do that automatically.</p><h5>Parameters</h5><ul><li>[in] <em>vmi</em> LibVMI instance</li><li>[in] <em>config_mode</em> The type of OS configuration that is provided.</li><li>[in] <em>config</em> Configuration is passed directly to LibVMI (ie. in a string or in a GHashTable) or NULL if global config file is used.</li><li>[out] <em>error</em> Optional. If not NULL and the function returns VMI_OS_UNKNOWN, this will specify the stage at which initialization failed.</li></ul><h5>Returns</h5><ul><li>VMI_OS_UNKNOWN when the configuration didn't work for the VM, otherwise the OS type that has been initialized (ie. VMI_OS_WINDOWS or VMI_OS_LINUX).</li></ul></li>
                 </ul>
                 </td></tr>
 <tr><td>
