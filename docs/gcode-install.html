@@ -106,7 +106,7 @@ you would rather not install all of the dependencies for that platform):</p>
 <p>LibVMI uses the standard GNU build system. To compile the library, follow
 the steps shown below:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./autogen.sh
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./autogen.sh
 ./configure
 make
 </code></pre></div></div>
@@ -121,7 +121,7 @@ The results of configure are displayed to stdout so you can verify that
 everything is as you intended before proceeding with the compilation.
 For a complete list of configure options, run:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./configure --help
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./configure --help
 </code></pre></div></div>
 
 <h2 id="installing-libvmi">Installing LibVMI</h2>
@@ -130,7 +130,7 @@ to use the LibVMI library. However, if you are just running the examples,
 then there is no need to do an installation. If you choose to install
 LibVMI, you can do it using the steps shown below:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>su -
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>su -
 make install
 ldconfig
 exit
@@ -145,7 +145,7 @@ Windows), the location of symbolic information, and offsets used to access
 data within the virtual machine or memory image. The file format is
 relatively straightforward. The generic format is shown below:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;VM Name or Filename&gt; {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;VM Name or Filename&gt; {
     &lt;key&gt; = &lt;value&gt;;
     &lt;key&gt; = &lt;value&gt;;
 }
@@ -201,7 +201,7 @@ in libvmi/tools/windows-offset-finder.</p>
 the number should be preceded with a “0x”. An example configuration
 file is shown below:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Fedora-HVM {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Fedora-HVM {
     sysmap      = "/boot/System.map-2.6.18-1.2798.fc6";
     ostype      = "Linux";
     linux_tasks = 268;
@@ -227,7 +227,7 @@ in place, you are now ready to start using LibVMI.</p>
 <p>LibVMI includes the ability to show debugging output. This output is
 very verbose, but may be useful when tracking down bugs in your
 application or in LibVMI itself. To enable the debug output, uncomment
-the VMI_DEBUG variable near the top of the <code class="highlighter-rouge">libvmi/debug.h</code> file. After
+the VMI_DEBUG variable near the top of the <code class="language-plaintext highlighter-rouge">libvmi/debug.h</code> file. After
 uncommenting this variable, you will need to recompile LibVMI (and,
 optionally, reinstall LibVMI). With the debug output enabled, you will
 see lots of information on stdout about LibVMI’s operation.</p>
