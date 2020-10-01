@@ -1,4 +1,4 @@
-# LibVMI Website
+# LibVMI Website An Amazing Project
 
 Available under [libvmi.com](http://libvmi.com).
 
