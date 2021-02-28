@@ -2,11 +2,7 @@ name: CI
 
 on:
   schedule:
-    - cron:  '0 13 * * *' 
-  push:
-    branches: [ source ]
-  pull_request:
-    branches: [ source ]
+    - cron:  '0 13 * * *'
 
 jobs:
   generate_page:
