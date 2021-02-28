@@ -150,14 +150,26 @@
                 </td></tr>
 <tr><td>
                 <ul class="list-group">
-                <li class="list-group-item active" id="func_vmi_pagetable_lookup">status_t vmi_pagetable_lookup (vmi_instance_t vmi, addr_t dtb, addr_t vaddr, addr_t *paddr) NOEXCEPT</li>
-                <li class="list-group-item"><p>Translates a virtual address to a physical address.</p><h5>Parameters</h5><ul><li>[in] <em>vmi</em> LibVMI instance</li><li>[in] <em>dtb</em> address of the relevant page directory base</li><li>[in] <em>vaddr</em> virtual address to translate via dtb</li><li>[out] <em>paddr</em> Physical address</li></ul><h5>Returns</h5><ul><li>VMI_SUCCESS or VMI_FAILURE</li></ul></li>
+                <li class="list-group-item active" id="func_vmi_pagetable_lookup">status_t vmi_pagetable_lookup (vmi_instance_t vmi, addr_t pt, addr_t vaddr, addr_t *paddr) NOEXCEPT</li>
+                <li class="list-group-item"><p>Translates a virtual address to a physical address.</p><h5>Parameters</h5><ul><li>[in] <em>vmi</em> LibVMI instance</li><li>[in] <em>pt</em> address of the relevant pagetable</li><li>[in] <em>vaddr</em> virtual address to translate via dtb</li><li>[out] <em>paddr</em> Physical address</li></ul><h5>Returns</h5><ul><li>VMI_SUCCESS or VMI_FAILURE</li></ul></li>
                 </ul>
                 </td></tr>
 <tr><td>
                 <ul class="list-group">
-                <li class="list-group-item active" id="func_vmi_pagetable_lookup_extended">status_t vmi_pagetable_lookup_extended (vmi_instance_t vmi, addr_t dtb, addr_t vaddr, page_info_t *info) NOEXCEPT</li>
-                <li class="list-group-item"><p>Gets the physical address and page size of the VA as well as the addresses of other paging related structures depending on the page mode of the VM.</p><h5>Parameters</h5><ul><li>[in] <em>vmi</em> LibVMI instance</li><li>[in] <em>dtb</em> address of the relevant page directory base</li><li>[in] <em>vaddr</em> virtual address to translate via dtb</li><li>[inout] <em>info</em> Pointer to the struct to store the lookup information in</li></ul><h5>Returns</h5><ul><li>VMI_SUCCESS or VMI_FAILURE of the VA is invalid</li></ul></li>
+                <li class="list-group-item active" id="func_vmi_pagetable_lookup_extended">status_t vmi_pagetable_lookup_extended (vmi_instance_t vmi, addr_t pt, addr_t vaddr, page_info_t *info) NOEXCEPT</li>
+                <li class="list-group-item"><p>Gets the physical address and page size of the VA as well as the addresses of other paging related structures depending on the page mode of the VM.</p><h5>Parameters</h5><ul><li>[in] <em>vmi</em> LibVMI instance</li><li>[in] <em>pt</em> address of the relevant pagetable</li><li>[in] <em>vaddr</em> virtual address to translate via dtb</li><li>[inout] <em>info</em> Pointer to the struct to store the lookup information in</li></ul><h5>Returns</h5><ul><li>VMI_SUCCESS or VMI_FAILURE of the VA is invalid</li></ul></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="func_vmi_nested_pagetable_lookup">status_t vmi_nested_pagetable_lookup (vmi_instance_t vmi, addr_t npt, page_mode_t npm, addr_t pt, page_mode_t pm, addr_t vaddr, addr_t *paddr, addr_t *naddr) NOEXCEPT</li>
+                <li class="list-group-item"><p>Translates a virtual address to a physical address, supporting nested pagetables (ie. EPT). Can be called with npm set to VMI_PM_NONE, in which case this function is equivalent to vmi_pagetable_lookup.</p><p>To perform only nested pagetable lookup of an l2 guest paddr use pt and pm with the nested pagetable address and mode.</p><h5>Parameters</h5><ul><li>[in] <em>vmi</em> LibVMI instance</li><li>[in] <em>npt</em> address of the nested pagetable</li><li>[in] <em>npm</em> page mode to use for lookup in nested pagetable</li><li>[in] <em>pt</em> address of the relevant pagetable</li><li>[in] <em>pm</em> page mode to use for lookup.</li><li>[in] <em>vaddr</em> virtual address to translate via dtb</li><li>[out] <em>paddr</em> Guest physical address (l2) value is set to ~0ull if npm is set and translation was in the v2p cache</li><li>[out] <em>naddr</em> Guest nested physical address (l1) if npm is set</li></ul><h5>Returns</h5><ul><li>VMI_SUCCESS or VMI_FAILURE</li></ul></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="func_vmi_nested_pagetable_lookup_extended">status_t vmi_nested_pagetable_lookup_extended (vmi_instance_t vmi, addr_t npt, page_mode_t npm, addr_t pt, page_mode_t pm, addr_t vaddr, page_info_t *info) NOEXCEPT</li>
+                <li class="list-group-item"><p>Gets the physical address and page size of the VA as well as the addresses of other paging related structures depending on the page mode(s), supprting nested pagetables (ie. EPT).</p><h5>Parameters</h5><ul><li>[in] <em>vmi</em> LibVMI instance</li><li>[in] <em>npt</em> address of the nested pagetable</li><li>[in] <em>npm</em> page mode to use for lookup in nested pagetable</li><li>[in] <em>pt</em> address of the relevant pagetable</li><li>[in] <em>pm</em> page mode to use for lookup</li><li>[in] <em>vaddr</em> virtual address to translate via dtb</li><li>[inout] <em>info</em> Pointer to the struct to store the lookup information in</li></ul><h5>Returns</h5><ul><li>VMI_SUCCESS or VMI_FAILURE of the VA is invalid</li></ul></li>
                 </ul>
                 </td></tr>
 <tr><td>
@@ -690,13 +702,25 @@
                 </td></tr>
 <tr><td>
                 <ul class="list-group">
-                <li class="list-group-item active" id="func_vmi_v2pcache_flush">void vmi_v2pcache_flush (vmi_instance_t vmi, addr_t dtb) NOEXCEPT</li>
+                <li class="list-group-item active" id="func_vmi_v2pcache_flush">void vmi_v2pcache_flush (vmi_instance_t vmi, addr_t pt) NOEXCEPT</li>
                 <li class="list-group-item"><p>Removes all entries from LibVMI's internal virtual to physical address cache. This is generally only useful if you believe that an entry in the cache is incorrect, or out of date.</p><h5>Parameters</h5><ul><li>[in] <em>vmi</em> LibVMI instance</li><li>[in] <em>dtb</em> The process address space to flush, or ~0ull for all.</li></ul><h5>Returns</h5><ul><li>VMI_SUCCESS or VMI_FAILURE</li></ul></li>
                 </ul>
                 </td></tr>
 <tr><td>
                 <ul class="list-group">
-                <li class="list-group-item active" id="func_vmi_v2pcache_add">void vmi_v2pcache_add (vmi_instance_t vmi, addr_t va, addr_t dtb, addr_t pa) NOEXCEPT</li>
+                <li class="list-group-item active" id="func_vmi_v2pcache_nested_flush">void vmi_v2pcache_nested_flush (vmi_instance_t vmi, addr_t pt, addr_t npt) NOEXCEPT</li>
+                <li class="list-group-item"><p>Removes all entries from LibVMI's internal virtual to physical address cache. This is generally only useful if you believe that an entry in the cache is incorrect, or out of date.</p><h5>Parameters</h5><ul><li>[in] <em>vmi</em> LibVMI instance</li><li>[in] <em>dtb</em> The process address space to flush, or ~0ull for all.</li></ul><h5>Returns</h5><ul><li>VMI_SUCCESS or VMI_FAILURE</li></ul></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="func_vmi_v2pcache_add">void vmi_v2pcache_add (vmi_instance_t vmi, addr_t va, addr_t pt, addr_t pa) NOEXCEPT</li>
+                <li class="list-group-item"><p>Adds one entry to LibVMI's internal virtual to physical address cache.</p><h5>Parameters</h5><ul><li>[in] <em>vmi</em> LibVMI instance</li><li>[in] <em>va</em> Virtual address</li><li>[in] <em>dtb</em> Directory table base for va</li><li>[in] <em>pa</em> Physical address</li></ul><h5>Returns</h5><ul><li>VMI_SUCCESS or VMI_FAILURE</li></ul></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="func_vmi_v2pcache_nested_add">void vmi_v2pcache_nested_add (vmi_instance_t vmi, addr_t va, addr_t pt, addr_t npt, addr_t pa) NOEXCEPT</li>
                 <li class="list-group-item"><p>Adds one entry to LibVMI's internal virtual to physical address cache.</p><h5>Parameters</h5><ul><li>[in] <em>vmi</em> LibVMI instance</li><li>[in] <em>va</em> Virtual address</li><li>[in] <em>dtb</em> Directory table base for va</li><li>[in] <em>pa</em> Physical address</li></ul><h5>Returns</h5><ul><li>VMI_SUCCESS or VMI_FAILURE</li></ul></li>
                 </ul>
                 </td></tr>
@@ -803,6 +827,60 @@
                 <ul class="list-group">
                 <li class="list-group-item active" id="macro_VMI_INIT_DOMAINWATCH">#define VMI_INIT_DOMAINWATCH (1u << 4)</li>
                 <li class="list-group-item"><p>initialize using a domain watcher</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_VMI_PM_NONE">#define VMI_PM_NONE 0</li>
+                <li class="list-group-item"><p>no page mode</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_VMI_PM_UNKNOWN">#define VMI_PM_UNKNOWN 1</li>
+                <li class="list-group-item"><p>unknown paging mode</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_VMI_PM_LEGACY">#define VMI_PM_LEGACY 2</li>
+                <li class="list-group-item"><p>x86 32-bit paging</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_VMI_PM_PAE">#define VMI_PM_PAE 3</li>
+                <li class="list-group-item"><p>x86 PAE paging</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_VMI_PM_IA32E">#define VMI_PM_IA32E 4</li>
+                <li class="list-group-item"><p>x86 IA-32e paging</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_VMI_PM_AARCH32">#define VMI_PM_AARCH32 5</li>
+                <li class="list-group-item"><p>ARM 32-bit paging</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_VMI_PM_AARCH64">#define VMI_PM_AARCH64 6</li>
+                <li class="list-group-item"><p>ARM 64-bit paging</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_VMI_PM_EPT_4L">#define VMI_PM_EPT_4L 7</li>
+                <li class="list-group-item"><p>x86 4-level EPT</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_VMI_PM_EPT_5L">#define VMI_PM_EPT_5L 8</li>
+                <li class="list-group-item"><p>x86 5-level EPT</p></li>
                 </ul>
                 </td></tr>
 <tr><td>
@@ -2001,6 +2079,48 @@
                 </td></tr>
 <tr><td>
                 <ul class="list-group">
+                <li class="list-group-item active" id="macro_VMI_TM_NONE">#define VMI_TM_NONE 0</li>
+                <li class="list-group-item"><p>No translation is required, address is physical address</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_VMI_TM_PROCESS_DTB">#define VMI_TM_PROCESS_DTB 1</li>
+                <li class="list-group-item"><p>Translate addr via specified pagetable (aka. directory table base).</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_VMI_TM_PROCESS_PT">#define VMI_TM_PROCESS_PT 1</li>
+                <li class="list-group-item"><p>Translate addr via specified pagetable.</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_VMI_TM_PROCESS_PID">#define VMI_TM_PROCESS_PID 2</li>
+                <li class="list-group-item"><p>Translate addr by finding process first to use its DTB.</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_VMI_TM_KERNEL_SYMBOL">#define VMI_TM_KERNEL_SYMBOL 3</li>
+                <li class="list-group-item"><p>Find virtual address of kernel symbol and translate it via kernel DTB.</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_ACCESS_CONTEXT_VERSION">#define ACCESS_CONTEXT_VERSION 0x1u</li>
+                <li class="list-group-item"><p>Structure to use as input to accessor functions specifying how the access should be performed. Must specify ABI version.</p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
+                <li class="list-group-item active" id="macro_ACCESS_CONTEXT">#define ACCESS_CONTEXT (C, ...)</li>
+                <li class="list-group-item"><p><strong>Value</strong><br /><small><pre>C = {                      \<br />        .version = ,      \<br />        __VA_ARGS__                             \<br />    }</pre></small></p></li>
+                </ul>
+                </td></tr>
+<tr><td>
+                <ul class="list-group">
                 <li class="list-group-item active" id="macro_VMI_GET_BIT">#define VMI_GET_BIT (reg, bit)</li>
                 <li class="list-group-item"><p>Macro to test bitfield values (up to 64-bits)</p><p><strong>Value</strong><br /><small><pre>(!!(reg &amp; (1ULL&lt;&lt;bit)))</pre></small></p></li>
                 </ul>
@@ -2052,7 +2172,7 @@
                 </td></tr>
 <tr><td>
                 <ul class="list-group">
-                <li class="list-group-item active" id="typedef_page_mode_t">typedef enum page_mode  page_mode_t</li>
+                <li class="list-group-item active" id="typedef_page_mode_t">typedef uint32_t page_mode_t</li>
                 <li class="list-group-item"></li>
                 </ul>
                 </td></tr>
@@ -2118,14 +2238,14 @@
                 </td></tr>
 <tr><td>
                 <ul class="list-group">
-                <li class="list-group-item active" id="typedef_translation_mechanism_t">typedef enum translation_mechanism  translation_mechanism_t</li>
-                <li class="list-group-item"><p>Available translation mechanism for v2p conversion.</p></li>
+                <li class="list-group-item active" id="typedef_vmi_arch_t">typedef enum arch  vmi_arch_t</li>
+                <li class="list-group-item"><p>Supported architectures by LibVMI</p></li>
                 </ul>
                 </td></tr>
 <tr><td>
                 <ul class="list-group">
-                <li class="list-group-item active" id="typedef_vmi_arch_t">typedef enum arch  vmi_arch_t</li>
-                <li class="list-group-item"><p>Supported architectures by LibVMI</p></li>
+                <li class="list-group-item active" id="typedef_translation_mechanism_t">typedef uint32_t translation_mechanism_t</li>
+                <li class="list-group-item"><p>Available translation mechanism for v2p conversion.</p></li>
                 </ul>
                 </td></tr>
 <tr><td>
@@ -2181,12 +2301,6 @@
                 </td></tr>
 <tr><td>
                 <ul class="list-group">
-                <li class="list-group-item active" id="enum_page_mode">enum page_mode</li>
-                <li class="list-group-item"><table class='table table-condensed table-striped'><tr><td>VMI_PM_UNKNOWN</td><td>page mode unknown</td></tr><tr><td>VMI_PM_LEGACY</td><td>x86 32-bit paging</td></tr><tr><td>VMI_PM_PAE</td><td>x86 PAE paging</td></tr><tr><td>VMI_PM_IA32E</td><td>x86 IA-32e paging</td></tr><tr><td>VMI_PM_AARCH32</td><td>ARM 32-bit paging</td></tr><tr><td>VMI_PM_AARCH64</td><td>ARM 64-bit paging</td></tr></table></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
                 <li class="list-group-item active" id="enum_page_size">enum page_size</li>
                 <li class="list-group-item"><table class='table table-condensed table-striped'><tr><td>VMI_PS_UNKNOWN</td><td>page size unknown</td></tr><tr><td>VMI_PS_1KB</td><td>1KB</td></tr><tr><td>VMI_PS_4KB</td><td>4KB</td></tr><tr><td>VMI_PS_16KB</td><td>16KB</td></tr><tr><td>VMI_PS_64KB</td><td>64KB</td></tr><tr><td>VMI_PS_1MB</td><td>1MB</td></tr><tr><td>VMI_PS_2MB</td><td>2MB</td></tr><tr><td>VMI_PS_4MB</td><td>4MB</td></tr><tr><td>VMI_PS_16MB</td><td>16MB</td></tr><tr><td>VMI_PS_32MB</td><td>32MB</td></tr><tr><td>VMI_PS_512MB</td><td>512MB</td></tr><tr><td>VMI_PS_1GB</td><td>1GB</td></tr></table></li>
                 </ul>
@@ -2195,12 +2309,6 @@
                 <ul class="list-group">
                 <li class="list-group-item active" id="enum_vmi_init_data_type_t">enum vmi_init_data_type_t</li>
                 <li class="list-group-item"><table class='table table-condensed table-striped'><tr><td>VMI_INIT_DATA_XEN_EVTCHN</td><td>Xen file descriptor</td></tr><tr><td>VMI_INIT_DATA_MEMMAP</td><td></td></tr><tr><td>VMI_INIT_DATA_KVMI_SOCKET</td><td>kvmi socket path</td></tr></table></li>
-                </ul>
-                </td></tr>
-<tr><td>
-                <ul class="list-group">
-                <li class="list-group-item active" id="enum_translation_mechanism">enum translation_mechanism</li>
-                <li class="list-group-item"><table class='table table-condensed table-striped'><tr><td>VMI_TM_INVALID</td><td>Invalid translation mechanism</td></tr><tr><td>VMI_TM_NONE</td><td>No translation is required, address is physical address</td></tr><tr><td>VMI_TM_PROCESS_DTB</td><td>Translate addr via specified directory table base.</td></tr><tr><td>VMI_TM_PROCESS_PID</td><td>Translate addr by finding process first to use its DTB.</td></tr><tr><td>VMI_TM_KERNEL_SYMBOL</td><td>Find virtual address of kernel symbol and translate it via kernel DTB.</td></tr></table></li>
                 </ul>
                 </td></tr>
 <tr><td>
@@ -2237,6 +2345,8 @@
 <li><a href='#func_vmi_dtb_to_pid'>vmi_dtb_to_pid</a></li>
 <li><a href='#func_vmi_pagetable_lookup'>vmi_pagetable_lookup</a></li>
 <li><a href='#func_vmi_pagetable_lookup_extended'>vmi_pagetable_lookup_extended</a></li>
+<li><a href='#func_vmi_nested_pagetable_lookup'>vmi_nested_pagetable_lookup</a></li>
+<li><a href='#func_vmi_nested_pagetable_lookup_extended'>vmi_nested_pagetable_lookup_extended</a></li>
 <li><a href='#func_vmi_read'>vmi_read</a></li>
 <li><a href='#func_vmi_read_8'>vmi_read_8</a></li>
 <li><a href='#func_vmi_read_16'>vmi_read_16</a></li>
@@ -2326,7 +2436,9 @@
 <li><a href='#func_vmi_pause_vm'>vmi_pause_vm</a></li>
 <li><a href='#func_vmi_resume_vm'>vmi_resume_vm</a></li>
 <li><a href='#func_vmi_v2pcache_flush'>vmi_v2pcache_flush</a></li>
+<li><a href='#func_vmi_v2pcache_nested_flush'>vmi_v2pcache_nested_flush</a></li>
 <li><a href='#func_vmi_v2pcache_add'>vmi_v2pcache_add</a></li>
+<li><a href='#func_vmi_v2pcache_nested_add'>vmi_v2pcache_nested_add</a></li>
 <li><a href='#func_vmi_symcache_flush'>vmi_symcache_flush</a></li>
 <li><a href='#func_vmi_symcache_add'>vmi_symcache_add</a></li>
 <li><a href='#func_vmi_rvacache_flush'>vmi_rvacache_flush</a></li>
@@ -2349,6 +2461,15 @@
 <li><a href='#macro_VMI_INIT_EVENTS'>VMI_INIT_EVENTS</a></li>
 <li><a href='#macro_VMI_INIT_DOMAINUUID'>VMI_INIT_DOMAINUUID</a></li>
 <li><a href='#macro_VMI_INIT_DOMAINWATCH'>VMI_INIT_DOMAINWATCH</a></li>
+<li><a href='#macro_VMI_PM_NONE'>VMI_PM_NONE</a></li>
+<li><a href='#macro_VMI_PM_UNKNOWN'>VMI_PM_UNKNOWN</a></li>
+<li><a href='#macro_VMI_PM_LEGACY'>VMI_PM_LEGACY</a></li>
+<li><a href='#macro_VMI_PM_PAE'>VMI_PM_PAE</a></li>
+<li><a href='#macro_VMI_PM_IA32E'>VMI_PM_IA32E</a></li>
+<li><a href='#macro_VMI_PM_AARCH32'>VMI_PM_AARCH32</a></li>
+<li><a href='#macro_VMI_PM_AARCH64'>VMI_PM_AARCH64</a></li>
+<li><a href='#macro_VMI_PM_EPT_4L'>VMI_PM_EPT_4L</a></li>
+<li><a href='#macro_VMI_PM_EPT_5L'>VMI_PM_EPT_5L</a></li>
 <li><a href='#macro_VMI_PM_INITFLAG_TRANSITION_PAGES'>VMI_PM_INITFLAG_TRANSITION_PAGES</a></li>
 <li><a href='#macro_VMI_INVALID_DOMID'>VMI_INVALID_DOMID</a></li>
 <li><a href='#macro_EAX'>EAX</a></li>
@@ -2548,6 +2669,13 @@
 <li><a href='#macro_PC64'>PC64</a></li>
 <li><a href='#macro_SPSR_EL1'>SPSR_EL1</a></li>
 <li><a href='#macro_TCR_EL1'>TCR_EL1</a></li>
+<li><a href='#macro_VMI_TM_NONE'>VMI_TM_NONE</a></li>
+<li><a href='#macro_VMI_TM_PROCESS_DTB'>VMI_TM_PROCESS_DTB</a></li>
+<li><a href='#macro_VMI_TM_PROCESS_PT'>VMI_TM_PROCESS_PT</a></li>
+<li><a href='#macro_VMI_TM_PROCESS_PID'>VMI_TM_PROCESS_PID</a></li>
+<li><a href='#macro_VMI_TM_KERNEL_SYMBOL'>VMI_TM_KERNEL_SYMBOL</a></li>
+<li><a href='#macro_ACCESS_CONTEXT_VERSION'>ACCESS_CONTEXT_VERSION</a></li>
+<li><a href='#macro_ACCESS_CONTEXT'>ACCESS_CONTEXT</a></li>
 <li><a href='#macro_VMI_GET_BIT'>VMI_GET_BIT</a></li>
 <li><a href='#macro_VMI_BIT_MASK'>VMI_BIT_MASK</a></li>
 </ul>
@@ -2572,8 +2700,8 @@
 <li><a href='#typedef_addr_t'>addr_t</a></li>
 <li><a href='#typedef_vmi_pid_t'>vmi_pid_t</a></li>
 <li><a href='#typedef_page_info_t'>page_info_t</a></li>
-<li><a href='#typedef_translation_mechanism_t'>translation_mechanism_t</a></li>
 <li><a href='#typedef_vmi_arch_t'>vmi_arch_t</a></li>
+<li><a href='#typedef_translation_mechanism_t'>translation_mechanism_t</a></li>
 <li><a href='#typedef_unicode_string_t'>unicode_string_t</a></li>
 <li><a href='#typedef_vmi_instance_t'>vmi_instance_t</a></li>
 </ul>
@@ -2587,10 +2715,8 @@
 <li><a href='#enum_vmi_init_error'>vmi_init_error</a></li>
 <li><a href='#enum_os'>os</a></li>
 <li><a href='#enum_win_ver'>win_ver</a></li>
-<li><a href='#enum_page_mode'>page_mode</a></li>
 <li><a href='#enum_page_size'>page_size</a></li>
 <li><a href='#enum_vmi_init_data_type_t'>vmi_init_data_type_t</a></li>
-<li><a href='#enum_translation_mechanism'>translation_mechanism</a></li>
 <li><a href='#enum_arch'>arch</a></li>
 </ul>
 </li>
