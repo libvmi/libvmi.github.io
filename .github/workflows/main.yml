@@ -16,6 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
+        ref: source
         path: libvmi-gh-pages
     - uses: actions/checkout@v2
       with:
