@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  schedule:
+    - cron:  '0 13 * * *' 
+  push:
+    branches: [ source ]
+  pull_request:
+    branches: [ source ]
+
+jobs:
+  generate_page:
+    name: Generate page contents
+    runs-on: ubuntu-latest
+    container: jekyll/jekyll:stable
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: source
+        path: libvmi-gh-pages
+    - uses: actions/checkout@v2
+      with:
+        repository: libvmi/libvmi
+        path: libvmi
+    - name: Install dependencies
+      run: |
+        apk add python3 doxygen
+        python3 -m ensurepip
+        python3 -m pip install xmltodict==0.12.0
+    - name: Generate Doxygen XML
+      run: |
+        chown -R 1000:1000 libvmi-gh-pages
+        echo "GENERATE_XML=YES" > libvmi/libvmi/Doxyfile
+        sh -c 'cd libvmi/libvmi && doxygen'
+    - name: Generate API docs HTML
+      run: |
+        python3 libvmi-gh-pages/parse-doxygen-xml.py libvmi/libvmi/xml/libvmi_8h.xml > libvmi-gh-pages/api/index.html
+    - name: Build content with Jekyll
+      run: |
+        sh -c 'cd libvmi-gh-pages && jekyll build -d output'
+    - uses: actions/upload-artifact@v2
+      with:
+        name: gh-pages-content
+        path: libvmi-gh-pages/output
+    - if: ${{ github.event_name != 'pull_request' }}
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./libvmi-gh-pages/output
+        publish_branch: master
